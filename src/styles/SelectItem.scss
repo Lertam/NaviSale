@@ -1,0 +1,58 @@
+@import "./_variables.scss";
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+div.selectItem {
+  margin: 0 10px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  div.selected {
+    display: flex;
+    align-items: center;
+    span {
+      font-size: 12px;
+      margin-left: 5px;
+      background: #dadada;
+      padding: 3px 7px;
+      border-radius: 10px;
+    }
+    div.downIcon {
+      background: url('./images/down.png');
+      background-size: contain;
+      width: 13px;
+      height: 13px;
+      margin-left: 8px;
+    }
+    cursor: pointer;
+    user-select: none;
+  }
+  div.dropdown {
+    font-family: $font_header;
+    width: 200px;
+    background: white;
+    border: 1px solid rgba(0,0,0,0.1);
+    padding: 20px;
+    display: none;
+    position: absolute;
+    z-index: 9;
+    top: 25px;
+    margin-left: -20px;
+
+    .item {
+      margin-bottom: 7px;
+      input {
+        margin-right: 4px;
+      }
+    }
+
+    &.opened {
+      display: block;
+      animation-name: fadein;
+      animation-duration: 0.3s;
+    }
+  }
+}

@@ -1,0 +1,79 @@
+@import "./_variables.scss";
+
+@keyframes entering {
+  from { margin-left: -1000px; }
+  to { margin-left: 0; }
+}
+
+.couponContainer {
+  z-index: 9999;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.2);
+  transition: 0.2s;
+
+  .coupon {
+    width: 50vw;
+    height: 60vh;
+    background: url('./images/dot.png');
+    background-size: 15px 15px;
+    box-sizing: border-box;
+    box-shadow: 2px 0px 13px rgba(0, 0, 0, 0.05);
+    animation-name: entering;
+    animation-duration: 0.3s;
+    position: relative;
+
+    p.header {
+      padding: 30px;
+      background: white;
+      border-bottom: 1px solid black;
+      font-family: $font_header;
+      font-size: 25px;
+    }
+    div.descriptionWrapper {
+      padding: 30px;
+      border-left: 15px solid black;
+      span {
+        background: $color_text_bg;
+        font-size: 26px;
+        font-family: $font_body;
+      }
+    }
+    div.codeWrapper {
+      display: flex;
+      align-items: center;
+      position: absolute;
+      bottom: 0;
+      box-sizing: border-box;
+      padding: 50px;
+      width: 100%;
+      p {
+        border: none;
+        background: $color_coupon_bg;
+        font-size: 25px;
+        padding: 20px;
+        font-family: $font_header;
+      }
+      button {
+        width: 50px;
+        height: 50px;
+        background: url('./images/copy.png');
+        background-size: contain;
+        margin-left: 20px;
+        border: 0;
+        cursor: pointer;
+        &:focus { outline: 0; }
+      }
+      input {
+        opacity: 0;
+        cursor: default;
+      }
+    }
+  }
+}
