@@ -1,8 +1,8 @@
 @import "./_variables.scss";
 
 @keyframes entering {
-  from { margin-left: -1000px; }
-  to { margin-left: 0; }
+  from { transform: translateX(-1000px); }
+  to { transform: none; }
 }
 
 .couponContainer {

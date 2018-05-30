@@ -5,7 +5,7 @@ const ExtractPlugin = require('extract-text-webpack-plugin')
 const config = {
   devServer: {
     compress: true,
-    port: 1992,
+    port: 6006,
     open: false
   },
   mode: 'none',

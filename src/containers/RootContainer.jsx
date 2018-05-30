@@ -23,7 +23,7 @@ class RootContainer extends Component {
       <Fragment>
         <Header path={pathname}/>
         <div className='contentWrapper'>
-          <Route exact path={'/coupons'} component={CouponsContainer} />
+          <Route path={'/coupons'} component={CouponsContainer} />
           <Route path={'/shops'} component={ShopsContainer} />
         </div>
         <Footer />

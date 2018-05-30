@@ -9,7 +9,6 @@ class SiteItem extends Component {
   }
   render () {
     const { site, url } = this.props
-    console.log(site);
     return (
       <Link to={`${url}/${site.ID}`} className='siteItem'>
         <p className='name'>{ site.Name }</p>

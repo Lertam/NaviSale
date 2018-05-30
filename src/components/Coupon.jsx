@@ -18,6 +18,7 @@ class Coupon extends Component {
   }
   renderCouponBody () {
     const { coupon } = this.props
+
     return (
       <Fragment>
         <p className='header'>{ coupon.Site }</p>

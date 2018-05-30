@@ -11,13 +11,15 @@ class ShopsContainer extends Component {
     super(props)
   }
   componentDidMount () {
-    const { shopsActions: { getShops } } = this.props
+    const { shopsActions: { getShops, getCategories } } = this.props
     getShops()
+    getCategories()
   }
   render () {
-    const { shops, meta, shopsActions, match } = this.props
+    const { shops, categories, meta, shopsActions, match } = this.props
     return <Shops
       shops={shops.set}
+      categories={categories.set}
       meta={meta}
       shopsActions={shopsActions}
       match={match}
@@ -26,7 +28,8 @@ class ShopsContainer extends Component {
 }
 
 const mapStateToProps = state => ({
-  shops: state.shops
+  shops: state.shops,
+  categories: state.categories
 })
 const mapDispatchToProps = dispatch => ({
   shopsActions: bindActionCreators(shopsActions, dispatch)
