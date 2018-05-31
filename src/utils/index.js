@@ -103,7 +103,6 @@ export const recalculateMatrix = (matrix, step, role) => {
         }
       })
     })
-    console.log(data.groups);
     return data.groups
   }
   const _findAttackedGroups = (_groups, _neighbours) => {

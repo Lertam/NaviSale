@@ -16,7 +16,6 @@ class CouponContainer extends Component {
   }
   render () {
     const { match, history: { push }, coupons: { current, currentRequest }, previousUrl } = this.props
-    console.log(previousUrl);
     return <Coupon
       match={match}
       historyPush={push}
