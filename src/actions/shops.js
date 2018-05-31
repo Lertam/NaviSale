@@ -14,6 +14,18 @@ export const getShops = data => dispatch => {
   }))(data)))
 }
 
+export const getShop = id => dispatch => {
+  dispatch((() => ({
+    type: shopsTypes.GET_SHOP__REQUEST
+  }))())
+  shopsApi
+  .getShop(id)
+  .then(data => dispatch((shop => ({
+    type: shopsTypes.GET_SHOP__SUCCESS,
+    payload: { current: shop }
+  }))(data)))
+}
+
 export const getCategories = data => dispatch => {
   dispatch((() => ({
     type: shopsTypes.GET_CATEGORIES__REQUEST

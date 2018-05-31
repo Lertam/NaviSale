@@ -1,6 +1,52 @@
 @import "./_variables.scss";
 
+@media only screen and (max-device-width : 480px) {
 .coupons {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  box-sizing: border-box;
+  min-height: calc(100vh - 242px);
+  &.shop {
+  min-height: calc(100vh - 264px);
+  box-sizing: border-box;
+  padding-top: 15px;
+  }
+  div.no_coupones {
+    height: calc(100vh - 511px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    p {
+      font-size: 30px;
+      font-family: $font_header;
+      background-color: $color_text_bg;
+    }
+  }
+}
+}
+@media only screen and (min-device-width : 480px) {
+  .coupons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    box-sizing: border-box;
+    min-height: calc(100vh - 551px);
+    &.shop {
+    min-height: calc(100vh - 481px);
+    box-sizing: border-box;
+    padding-top: 15px;
+    }
+    div.no_coupones {
+      height: calc(100vh - 511px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      p {
+        font-size: 30px;
+        font-family: $font_header;
+        background-color: $color_text_bg;
+      }
+    }
+  }
 }

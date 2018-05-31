@@ -6,7 +6,7 @@ import '../styles/Shops.scss'
 // import { CouponContainer } from '../containers'
 import { SiteItem } from '../components/items'
 import { Filters } from './'
-
+import { ShopContainer } from '../containers'
 
 class Shops extends Component {
   constructor (props) {
@@ -19,30 +19,38 @@ class Shops extends Component {
     this.setState({ categoriesFilter: selected })
   }
   render () {
-    const { shops, categories, match: { url } } = this.props
+    const { shops, categories, match: { url, isExact } } = this.props
     const { categoriesFilter } = this.state
     const flatFilter = categoriesFilter.map(cat => cat.Name)
     return (
       <Fragment>
-        <Filters set={categories} caption={'по категориям'} onGroupsChange={this.handleFilterGroupsChange} />
-        <div className='shops'>
-          {
-            shops.map((item, key) =>
-              categoriesFilter.length !== 0
-              ? item.Categories && item.Categories.some(cat => flatFilter.includes(cat))  &&
-                <SiteItem
-                  key={key}
-                  site={item}
-                  url={url}
-                  />
-              : <SiteItem
-                  key={key}
-                  site={item}
-                  url={url}
-                  />
-            )
-          }
-        </div>
+        {
+          isExact && (
+            <Fragment>
+              <Filters set={categories} caption={'по категориям'} onGroupsChange={this.handleFilterGroupsChange} />
+              <div className='shops'>
+                {
+                  shops.map((item, key) =>
+                  categoriesFilter.length !== 0
+                  ? item.Categories && item.Categories.some(cat => flatFilter.includes(cat))  &&
+                    <SiteItem
+                      key={key}
+                      site={item}
+                      url={url}
+                      />
+                  : <SiteItem
+                      key={key}
+                      site={item}
+                      url={url}
+                      />
+                )}
+              </div>
+            </Fragment>
+          )
+        }
+        {
+          !isExact && <Route path={url + '/:shopId'} component={ShopContainer} />
+        }
       </Fragment>
     )
   }

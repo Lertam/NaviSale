@@ -11,6 +11,10 @@ export default (state = initialState, action) => {
       ...state,
       set: action.payload.set
     }
+    case shopsTypes.GET_SHOP__SUCCESS: return {
+      ...state,
+      current: action.payload.current
+    }
     default: return state
   }
 }

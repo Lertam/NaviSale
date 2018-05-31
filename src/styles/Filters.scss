@@ -1,23 +1,50 @@
 @import "./_variables.scss";
 
-div.filters {
-  display: flex;
-  margin: 30px 0;
-  padding: 16px 12px;
-  text-transform: uppercase;
-  border-bottom: 1px solid black;
-  font-family: $font_header;
 
-  p {
-    font-size: 15px;
-  }
-  b {
-    font-size: 17px;
-    margin-right: 80px;
-  }
+@media only screen and (max-device-width : 480px) {
+  div.filters {
+    display: flex;
+    margin-top: 70px;
+    margin-bottom: 10px;
+    padding: 10px 12px;
+    text-transform: uppercase;
+    border-bottom: 1px solid black;
+    font-family: $font_header;
 
-  .categorySelect {
-    font-size: 15px;
-    font-weight: 400;
+    p {
+      font-size: 11px;
+    }
+    b {
+      font-size: 12px;
+      margin-right: 25px;
+    }
+
+    .categorySelect {
+      font-size: 15px;
+      font-weight: 400;
+    }
+  }
+}
+@media only screen and (min-device-width : 480px) {
+  div.filters {
+    display: flex;
+    margin: 30px 0;
+    padding: 16px 12px;
+    text-transform: uppercase;
+    border-bottom: 1px solid black;
+    font-family: $font_header;
+
+    p {
+      font-size: 15px;
+    }
+    b {
+      font-size: 17px;
+      margin-right: 80px;
+    }
+
+    .categorySelect {
+      font-size: 15px;
+      font-weight: 400;
+    }
   }
 }

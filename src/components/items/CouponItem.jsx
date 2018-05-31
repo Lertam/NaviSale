@@ -8,9 +8,9 @@ class CouponItem extends Component {
     super(props)
   }
   render () {
-    const { coupon, url } = this.props
+    const { coupon, url, to } = this.props
     return (
-      <Link to={`${url}/${coupon.ID}`} className='couponItem'>
+      <Link to={to || `${url}/${coupon.ID}`} className='couponItem'>
         <p className='site'>{ coupon.Site }</p>
         <div className='descriptionContainer'>
           <span>{ coupon.Description }</span>

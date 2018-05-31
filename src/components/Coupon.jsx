@@ -7,8 +7,8 @@ class Coupon extends Component {
     super(props)
   }
   handleWrapperClick = () => {
-    const { match: { path }, historyPush } = this.props
-    historyPush(path.replace('/:couponId', ''))
+    const { match: { path }, historyPush, previousUrl } = this.props
+    historyPush(path.replace(previousUrl || '/:couponId', ''))
   }
   handleCodeCopyClick = e => {
     e.stopPropagation()

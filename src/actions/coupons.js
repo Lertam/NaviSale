@@ -18,7 +18,6 @@ export const getCoupon = id => dispatch => {
   dispatch((() => ({
     type: couponsTypes.GET_COUPON__REQUEST
   }))())
-  console.log(id);
   couponsApi
   .getCoupon(id)
   .then(data => dispatch((() => ({
