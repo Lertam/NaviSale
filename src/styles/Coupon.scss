@@ -48,7 +48,9 @@
       }
       div.codeWrapper {
         display: flex;
+        flex-direction: column;
         align-items: center;
+        justify-content: center;
         position: absolute;
         bottom: 0;
         box-sizing: border-box;
@@ -59,18 +61,39 @@
           background: $color_coupon_bg;
           font-size: 25px;
           padding: 20px;
+          width: 200px;
+          text-align: center;
           font-family: $font_header;
         }
-        button {
-          width: 50px;
-          height: 50px;
-          background: url('./images/copy.png');
-          background-size: contain;
-          margin-left: 20px;
-          border: 0;
-          cursor: pointer;
-          &:focus { outline: 0; }
+
+        div {
+          width: 200px;
+          background: black;
+          padding: 20px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          a {
+            color: white;
+            text-align: center;
+            font-family: $font_header;
+            text-transform: uppercase;
+            text-decoration: none;
+            font-size: 17px;
+            text-align: center;
+          }
         }
+
+        // button {
+        //   width: 50px;
+        //   height: 50px;
+        //   background: url('./images/copy.png');
+        //   background-size: contain;
+        //   margin-left: 20px;
+        //   border: 0;
+        //   cursor: pointer;
+        //   &:focus { outline: 0; }
+        // }
         input {
           opacity: 0;
           cursor: default;
@@ -121,8 +144,6 @@
         }
       }
       div.codeWrapper {
-        display: flex;
-        align-items: center;
         position: absolute;
         bottom: 0;
         box-sizing: border-box;
@@ -135,15 +156,20 @@
           padding: 20px;
           font-family: $font_header;
         }
-        button {
-          width: 50px;
-          height: 50px;
-          background: url('./images/copy.png');
-          background-size: contain;
-          margin-left: 20px;
-          border: 0;
-          cursor: pointer;
-          &:focus { outline: 0; }
+        // button {
+        //   width: 50px;
+        //   height: 50px;
+        //   background: url('./images/copy.png');
+        //   background-size: contain;
+        //   margin-left: 20px;
+        //   border: 0;
+        //   cursor: pointer;
+        //   &:focus { outline: 0; }
+        // }
+        a {
+          background: black;
+          font-size: 17px;
+          text-align: center;
         }
         input {
           opacity: 0;

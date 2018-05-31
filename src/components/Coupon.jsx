@@ -18,7 +18,7 @@ class Coupon extends Component {
   }
   renderCouponBody () {
     const { coupon } = this.props
-
+    console.log(coupon);
     return (
       <Fragment>
         <p className='header'>{ coupon.Site }</p>
@@ -27,8 +27,7 @@ class Coupon extends Component {
         </div>
         <div className='codeWrapper'>
           <p>{ coupon.Code }</p>
-          <button onClick={this.handleCodeCopyClick}></button>
-          <input id='promocode' value={coupon.Code} onClick={e => e.stopPropagation()}/>
+          <div><a href={`http://${coupon.Site}`}>Перейти на сайт</a></div>
         </div>
       </Fragment>
     )

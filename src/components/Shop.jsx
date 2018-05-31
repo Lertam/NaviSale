@@ -13,6 +13,10 @@ class Shop extends Component {
     super(props)
   }
 
+  componentDidMount () {
+    window.scrollTo(0, 0)
+  }
+
   render () {
     const { shop, url } = this.props
 
