@@ -23,6 +23,7 @@ a.siteItem {
     padding-left: 12px;
     background: white;
     transition: 0.4s;
+    word-wrap: break-word;
   }
   p.domain {
     font-family: $font_header;

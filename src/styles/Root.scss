@@ -4,7 +4,6 @@
 
 html, body, #app {
   width: 100vw;
-  height: 100vh;
 
   @media only screen and (max-device-width : 480px) {
     .contentWrapper {
@@ -15,11 +14,13 @@ html, body, #app {
     }
   }
   @media only screen and (min-device-width : 480px) {
+    height: 100vh;
     .contentWrapper {
       box-sizing: border-box;
       padding: 0 15vw;
       padding-top: 150px;
       width: 100%;
+      min-height: calc(100vh - 225px);
     }
   }
 }

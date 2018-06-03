@@ -5,6 +5,9 @@ import '../styles/Coupon.scss'
 class Coupon extends Component {
   constructor (props) {
     super(props)
+    this.state = {
+      isCopied: false
+    }
   }
   handleWrapperClick = () => {
     const { match: { path }, historyPush, previousUrl } = this.props
@@ -15,9 +18,11 @@ class Coupon extends Component {
     const copied = document.getElementById('promocode')
     copied.select()
     document.execCommand('copy')
+    this.setState({ isCopied: true })
   }
   renderCouponBody () {
     const { coupon } = this.props
+    const { isCopied } = this.state
     return (
       <Fragment>
         <p className='header'>{ coupon.Site }</p>
@@ -25,8 +30,10 @@ class Coupon extends Component {
           <span>{ coupon.Description }</span>
         </div>
         <div className='codeWrapper'>
-          <p>{ coupon.Code }</p>
-          <div><a href={`http://${coupon.Site}`}>Перейти на сайт</a></div>
+          <p className='description'>Скопируйте этот промокод (для этого просто нажмите на него), перейдите на сайт и актирируйте его</p>
+          <p className={`code ${isCopied ? 'copied' : null}`} onClick={this.handleCodeCopyClick}>{ isCopied ? 'СКОПИРОВАНО!' : coupon.Code }</p>
+          <input id='promocode' value={ coupon.Code } type='text' />
+          <div><a target="_blank" href={`http://${coupon.Site}`}>Перейти на сайт</a></div>
         </div>
       </Fragment>
     )
