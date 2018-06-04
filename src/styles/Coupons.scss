@@ -14,9 +14,8 @@
   }
   div.no_coupones {
     display: flex;
-    padding: 20px 30px;
+    padding: 20px 0;
     justify-content: center;
-    background-color: $color_text_bg;
     p {
       font-size: 30px;
       font-family: $font_header;
