@@ -7,26 +7,24 @@
 
 @media only screen and (max-device-width : 480px) {
   div.selectItem {
-    margin: 0 10px;
     display: flex;
     align-items: center;
+    flex-direction: column;
     position: relative;
     div.selected {
       display: flex;
+      flex-wrap: wrap;
       align-items: center;
+      justify-content: flex-start;
+      width: 100%;
+      margin-top: 10px;
       span {
         font-size: 12px;
-        margin-left: 5px;
+        margin: 2px 5px;
+        margin-left: 0;
         background: #dadada;
         padding: 3px 7px;
         border-radius: 10px;
-      }
-      div.downIcon {
-        background: url('./images/down.png');
-        background-size: contain;
-        width: 13px;
-        height: 13px;
-        margin-left: 8px;
       }
       cursor: pointer;
       user-select: none;
@@ -41,7 +39,6 @@
       position: absolute;
       z-index: 9;
       top: 25px;
-      margin-left: -100px;
 
       .item {
         margin-bottom: 7px;

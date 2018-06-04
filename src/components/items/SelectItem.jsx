@@ -11,6 +11,9 @@ class SelectItem extends Component {
       group: []
     }
   }
+  componentDidMount () {
+    this.setState({ opened: this.props.opened })
+  }
   handleDropDownClick = () => {
     const { opened } = this.state
     if (opened) {
@@ -35,9 +38,8 @@ class SelectItem extends Component {
     onListChange(_newGroup)
   }
   render () {
-    const { selected, set, styles } = this.props
-    const { opened, group } = this.state
-
+    const { selected, set, styles, opened } = this.props
+    const { group } = this.state
 
     return (
       <div className='selectItem'>
@@ -45,7 +47,7 @@ class SelectItem extends Component {
           {
             group.map((item, key) => <span key={key}>{ item.Name }</span>)
           }
-          <div className='downIcon'></div></div>
+        </div>
         <div className={`dropdown ${opened && 'opened'}`}>
           {
             set.map((item, key) => (

@@ -4,20 +4,34 @@
 @media only screen and (max-device-width : 480px) {
   div.filters {
     display: flex;
-    margin-top: 70px;
+    flex-direction: column;
+    margin-top: 89px;
     margin-bottom: 10px;
-    padding: 10px 12px;
+    padding: 2px 12px 10px;
     text-transform: uppercase;
     border-bottom: 1px solid black;
     font-family: $font_header;
 
-    p {
-      font-size: 11px;
+    div.captions {
+      display: flex;
+      align-items: center;
+      p {
+        font-size: 11px;
+      }
+      b {
+        font-size: 12px;
+        margin-right: 25px;
+      }
     }
-    b {
-      font-size: 12px;
-      margin-right: 25px;
+
+    div.downIcon {
+      background: url('./images/down.png');
+      background-size: contain;
+      width: 13px;
+      height: 13px;
+      margin-left: 8px;
     }
+
 
     .categorySelect {
       font-size: 15px;
@@ -34,12 +48,25 @@
     border-bottom: 1px solid black;
     font-family: $font_header;
 
-    p {
-      font-size: 15px;
+    div.captions {
+      display: flex;
+      align-items: center;
+      p {
+        font-size: 15px;
+      }
+      b {
+        font-size: 17px;
+        margin-right: 80px;
+      }
     }
-    b {
-      font-size: 17px;
-      margin-right: 80px;
+
+    div.downIcon {
+      cursor: pointer;
+      background: url('./images/down.png');
+      background-size: contain;
+      width: 13px;
+      height: 13px;
+      margin-left: 8px;
     }
 
     .categorySelect {
