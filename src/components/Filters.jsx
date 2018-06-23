@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import '../styles/Filters.scss'
-
+import '../styles/NewStyles/Header__Filter.scss'
 import { SelectItem } from './items'
 
 class Filters extends Component {
@@ -22,7 +22,7 @@ class Filters extends Component {
     return (
       <div className='filters'>
         <div className='captions'>
-          <b>фильтр</b> <p>{ caption }</p>
+          <b></b> <p>{ caption }</p>
           <div className='downIcon' onClick={this.handleOpenClick}></div>
         </div>
         <SelectItem

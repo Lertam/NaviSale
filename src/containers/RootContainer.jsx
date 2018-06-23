@@ -18,13 +18,19 @@ class RootContainer extends Component {
     super(props)
   }
   render () {
-    const { coupons, shops, meta, location: { pathname } } = this.props
+    const {
+      coupons, shops, meta, location: { pathname }
+    } = this.props
     return (
       <Fragment>
-        <Header path={pathname}/>
-        <div className='contentWrapper'>
-          <Route path={'/coupons'} component={CouponsContainer} />
-          <Route path={'/shops'} component={ShopsContainer} />
+        <Header path={pathname} />
+        <div className="category__filter">
+          <ShopsContainer/>
+        </div>
+        <div className="contentWrapper">
+          <CouponsContainer/>
+          {/*<Route path="/coupons" component={CouponsContainer} />*/}
+          {/*<Route path="/shops" component={ShopsContainer} />*/}
         </div>
         <Footer />
       </Fragment>

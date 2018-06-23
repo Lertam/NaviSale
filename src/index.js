@@ -22,7 +22,7 @@ ReactDOM.render(
   <ConnectedRouter history={history}>
       <HashRouter>
         <Fragment>
-          <Redirect from='/' to='/coupons' />
+          {/*<Redirect from='/' to='/coupons' />*/}
           <Route path={'/'} component={RootContainer} />
         </Fragment>
       </HashRouter>

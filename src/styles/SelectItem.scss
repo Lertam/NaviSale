@@ -1,111 +1,147 @@
 @import "./_variables.scss";
 
-@keyframes fadein {
-  from { opacity: 0; }
-  to { opacity: 1; }
+
+.filter__item {
+  width: 155px;
+  height: 42px;
+  border-radius: 3px;
+  background-color: #ffffff1c;
+  border: 2px solid #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  color: rgb(255,255,255);
+  font-family: "Open Sans";
+  font-weight: bold;
+  cursor: pointer;
 }
 
-@media only screen and (max-device-width : 480px) {
-  div.selectItem {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    position: relative;
-    div.selected {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: flex-start;
-      width: 100%;
-      margin-top: 10px;
-      span {
-        font-size: 12px;
-        margin: 2px 5px;
-        margin-left: 0;
-        background: #dadada;
-        padding: 3px 7px;
-        border-radius: 10px;
-      }
-      cursor: pointer;
-      user-select: none;
-    }
-    div.dropdown {
-      font-family: $font_header;
-      width: 200px;
-      background: white;
-      border: 1px solid rgba(0,0,0,0.1);
-      padding: 20px;
-      display: none;
-      position: absolute;
-      z-index: 9;
-      top: 25px;
-
-      .item {
-        margin-bottom: 7px;
-        font-size: 10px;
-        input {
-          margin-right: 4px;
-        }
-      }
-
-      &.opened {
-        display: block;
-        animation-name: fadein;
-        animation-duration: 0.3s;
-      }
-    }
-  }
+.active__filter {
+  color: rgb(33,150,243);
 }
-@media only screen and (min-device-width : 480px) {
-  div.selectItem {
-    margin: 0 10px;
-    display: flex;
-    align-items: center;
-    position: relative;
-    div.selected {
-      display: flex;
-      align-items: center;
-      span {
-        font-size: 12px;
-        margin-left: 5px;
-        background: #dadada;
-        padding: 3px 7px;
-        border-radius: 10px;
-      }
-      div.downIcon {
-        background: url('./images/down.png');
-        background-size: contain;
-        width: 13px;
-        height: 13px;
-        margin-left: 8px;
-      }
-      cursor: pointer;
-      user-select: none;
-    }
-    div.dropdown {
-      font-family: $font_header;
-      width: 200px;
-      background: white;
-      border: 1px solid rgba(0,0,0,0.1);
-      padding: 20px;
-      display: none;
-      position: absolute;
-      z-index: 9;
-      top: 25px;
-      margin-left: -20px;
 
-      .item {
-        margin-bottom: 7px;
-        input {
-          margin-right: 4px;
-        }
-      }
 
-      &.opened {
-        display: block;
-        animation-name: fadein;
-        animation-duration: 0.3s;
-      }
-    }
-  }
+.filter__check {
+  display: none;
 }
+
+
+
+.dropdown {
+  display: flex;
+  justify-content: space-around;
+}
+
+
+
+
+//@keyframes fadein {
+//  from { opacity: 0; }
+//  to { opacity: 1; }
+//}
+//
+//@media only screen and (max-device-width : 480px) {
+//  div.selectItem {
+//    display: flex;
+//    align-items: center;
+//    flex-direction: column;
+//    position: relative;
+//    div.selected {
+//      display: flex;
+//      flex-wrap: wrap;
+//      align-items: center;
+//      justify-content: flex-start;
+//      width: 100%;
+//      margin-top: 10px;
+//      span {
+//        font-size: 12px;
+//        margin: 2px 5px;
+//        margin-left: 0;
+//        background: #dadada;
+//        padding: 3px 7px;
+//        border-radius: 10px;
+//      }
+//      cursor: pointer;
+//      user-select: none;
+//    }
+//    div.dropdown {
+//      font-family: $font_header;
+//      width: 200px;
+//      background: white;
+//      border: 1px solid rgba(0,0,0,0.1);
+//      padding: 20px;
+//      display: none;
+//      position: absolute;
+//      z-index: 9;
+//      top: 25px;
+//
+//      .item {
+//        margin-bottom: 7px;
+//        font-size: 10px;
+//        input {
+//          margin-right: 4px;
+//        }
+//      }
+//
+//      &.opened {
+//        display: block;
+//        animation-name: fadein;
+//        animation-duration: 0.3s;
+//      }
+//    }
+//  }
+//}
+//@media only screen and (min-device-width : 480px) {
+//  div.selectItem {
+//    margin: 0 10px;
+//    display: flex;
+//    align-items: center;
+//    position: relative;
+//    div.selected {
+//      display: flex;
+//      align-items: center;
+//      span {
+//        font-size: 12px;
+//        margin-left: 5px;
+//        background: #dadada;
+//        padding: 3px 7px;
+//        border-radius: 10px;
+//      }
+//      div.downIcon {
+//        background: url('./images/down.png');
+//        background-size: contain;
+//        width: 13px;
+//        height: 13px;
+//        margin-left: 8px;
+//      }
+//      cursor: pointer;
+//      user-select: none;
+//    }
+//    div.dropdown {
+//      font-family: $font_header;
+//      width: 200px;
+//      background: white;
+//      border: 1px solid rgba(0,0,0,0.1);
+//      padding: 20px;
+//      display: none;
+//      //position: absolute;
+//      z-index: 9;
+//      top: 25px;
+//      margin-left: -20px;
+//
+//      .item {
+//        margin-bottom: 7px;
+//        input {
+//          margin-right: 4px;
+//        }
+//      }
+//
+//      &.opened {
+//        display: block;
+//        animation-name: fadein;
+//        animation-duration: 0.3s;
+//      }
+//    }
+//  }
+//}

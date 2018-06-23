@@ -21,6 +21,7 @@ class Coupons extends Component {
     const { sitesFilter } = this.state
     return (
       <Fragment>
+        <div className="filters__sites-coupons">
         <Filters set={shops} caption={'по сайтам'} onGroupsChange={this.handleFilterGroupsChange} />
         <div className='coupons'>
           {
@@ -41,6 +42,7 @@ class Coupons extends Component {
                   />
             )
           }
+        </div>
         </div>
         <Route path={url + '/:couponId'} component={CouponContainer} />
       </Fragment>
