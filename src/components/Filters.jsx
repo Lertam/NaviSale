@@ -1,6 +1,4 @@
 import React, { Component } from 'react'
-import '../styles/Filters.scss'
-import '../styles/NewStyles/Header__Filter.scss'
 import { SelectItem } from './items'
 
 class Filters extends Component {
@@ -14,21 +12,17 @@ class Filters extends Component {
     const { onGroupsChange } = this.props
     onGroupsChange(selected)
   }
-  handleOpenClick = () => this.setState({ opened: !this.state.opened })
 
   render () {
     const { set, caption } = this.props
     const { opened } = this.state
     return (
       <div className='filters'>
-        <div className='captions'>
-          <b></b> <p>{ caption }</p>
-          <div className='downIcon' onClick={this.handleOpenClick}></div>
-        </div>
         <SelectItem
-          selected={'привет'}
           set={set}
           opened={opened}
+          imgUrl={this.props.image}
+          uniqLabel={this.props.uniq}
           styles={{
             selectedClassName: 'categorySelect'
           }}

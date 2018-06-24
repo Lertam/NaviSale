@@ -2,7 +2,6 @@ import React, { Component, Fragment } from 'react'
 import { withRouter, Route } from 'react-router'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-
 import '../styles/Root.scss'
 import { Header, Footer } from '../components'
 
@@ -19,20 +18,22 @@ class RootContainer extends Component {
   }
   render () {
     const {
-      coupons, shops, meta, location: { pathname }
+      coupons, categories, shops, meta, location: { pathname }
     } = this.props
     return (
       <Fragment>
         <Header path={pathname} />
-        <div className="category__filter">
-          <ShopsContainer/>
-        </div>
-        <div className="contentWrapper">
-          <CouponsContainer/>
-          {/*<Route path="/coupons" component={CouponsContainer} />*/}
-          {/*<Route path="/shops" component={ShopsContainer} />*/}
-        </div>
+        <div>
+          <div className="category__filter">
+            <ShopsContainer/>
+          </div>
+          <div className="contentWrapper">
+            <CouponsContainer/>
+            {/*<Route path="/coupons" component={CouponsContainer} />*/}
+            {/*<Route path="/shops" component={ShopsContainer} />*/}
+          </div>
         <Footer />
+        </div>
       </Fragment>
     )
   }

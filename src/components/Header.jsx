@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import '../styles/Header.scss'
 import logo from '../styles/images/logo__header.png'
-import vkImg from '../styles/images/vk.svg'
+
 
 class Header extends Component {
   constructor (props) {
@@ -29,7 +29,7 @@ class Header extends Component {
                   <div className="social__content">
                     <ul className="social__links">
                       <li className="social__links-vk">
-                        <a href="http://vk.com"><img src={vkImg} alt=""/></a>
+                        <a href="http://vk.com">vk</a>
                       </li>
                       <li className="social__links-telegram">
                         <a href="#">Telegram</a>

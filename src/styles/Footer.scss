@@ -1,76 +1,101 @@
 @import "./_variables.scss";
 
-@media only screen and (max-device-width : 480px) {
-footer {
+.footer__wrapper {
+  background-color: #b6b6b6;
   width: 100%;
-  height: 95px;
-  background: #b0b0b0;
+}
+
+.footer__content {
+  max-width: 1170px;
   display: flex;
-  justify-content: center;
+  margin: 0 auto;
   align-items: center;
-
-  div.logo {
-    background: url('./images/logo.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 35px;
-    height: 35px;
-  }
-  p {
-    font-size: 25px;
-    margin-right: 80px;
-    margin-bottom: 3px;
-    color: white;
-    font-family: $font_header;
-  }
-  .social {
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 30px;
-    height: 30px;
-    margin: 5px;
-
-    &.vk { background-image: url('./images/social/vk.png'); }
-    &.tg { background-image: url('./images/social/telegram.png'); }
-    &.in { background-image: url('./images/social/instagram.png'); }
-  }
+  justify-content: space-between;
+  padding-top: 35px;
+  padding-bottom: 35px;
 }
 
-}
-@media only screen and (min-device-width : 480px) {
-footer {
-  width: 100%;
-  height: 125px;
-  margin-top: 100px;
-  background: #b0b0b0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  div.logo {
-    background: url('./images/logo.png');
-    background-size: contain;
-    width: 40px;
-    height: 40px;
-  }
-  p {
-    font-size: 32px;
-    margin-right: 80px;
-    margin-bottom: 3px;
-    color: white;
-    font-family: $font_header;
-  }
-  .social {
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 30px;
-    height: 30px;
-    margin: 5px;
-
-    &.vk { background-image: url('./images/social/vk.png'); }
-    &.tg { background-image: url('./images/social/telegram.png'); }
-    &.in { background-image: url('./images/social/instagram.png'); }
-  }
+.copy p {
+  font-size: 14px;
+  color: rgb(25,22,43);
+  font-family: "Open Sans";
+  text-align: center;
 }
 
-}
+
+//@media only screen and (max-device-width : 480px) {
+//  footer {
+//    width: 100%;
+//    height: 95px;
+//    background: #b0b0b0;
+//    display: flex;
+//    justify-content: center;
+//    align-items: center;
+//
+//    div.logo {
+//      background: url('./images/logo.png');
+//      background-size: contain;
+//      background-repeat: no-repeat;
+//      width: 35px;
+//      height: 35px;
+//    }
+//    p {
+//      font-size: 25px;
+//      margin-right: 80px;
+//      margin-bottom: 3px;
+//      color: white;
+//      font-family: $font_header;
+//    }
+//    .social {
+//      background-repeat: no-repeat;
+//      background-size: contain;
+//      width: 30px;
+//      height: 30px;
+//      margin: 5px;
+//
+//      &.vk { background-image: url('./images/social/vk.png'); }
+//      &.tg { background-image: url('./images/social/telegram.png'); }
+//      &.in { background-image: url('./images/social/instagram.png'); }
+//    }
+//  }
+//
+//}
+//@media only screen and (min-device-width : 480px) {
+//  footer {
+//    width: 100%;
+//    height: 125px;
+//    margin-top: 100px;
+//    background: #b0b0b0;
+//    display: flex;
+//    justify-content: center;
+//    align-items: center;
+//
+//    div.logo {
+//      background: url('./images/logo.png');
+//      background-size: contain;
+//      width: 40px;
+//      height: 40px;
+//    }
+//    p {
+//      font-size: 32px;
+//      margin-right: 80px;
+//      margin-bottom: 3px;
+//      color: white;
+//      font-family: $font_header;
+//    }
+//    .social {
+//      background-repeat: no-repeat;
+//      background-size: contain;
+//      width: 30px;
+//      height: 30px;
+//      margin: 5px;
+//
+//      &.vk { background-image: url('./images/social/vk.png'); }
+//      &.tg { background-image: url('./images/social/telegram.png'); }
+//      &.in { background-image: url('./images/social/instagram.png'); }
+//    }
+//  }
+//
+//}
+//
+//

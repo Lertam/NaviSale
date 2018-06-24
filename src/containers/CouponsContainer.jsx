@@ -31,7 +31,7 @@ class CouponsContainer extends Component {
 const mapStateToProps = state => ({
   coupons: state.coupons,
   shops: state.shops,
-  meta: state.meta
+  meta: state.meta,
 })
 const mapDispatchToProps = dispatch => ({
   couponsActions: bindActionCreators(couponsActions, dispatch),
