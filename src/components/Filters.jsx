@@ -21,7 +21,6 @@ class Filters extends Component {
         <SelectItem
           set={set}
           opened={opened}
-          imgUrl={this.props.image}
           uniqLabel={this.props.uniq}
           styles={{
             selectedClassName: 'categorySelect'

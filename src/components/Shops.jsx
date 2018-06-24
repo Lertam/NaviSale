@@ -39,7 +39,7 @@ class Shops extends Component {
                        uniq={'shop__filter'} onGroupsChange={this.handleFilterGroupsChange} />
               </div>
               </div>
-              <Filters set={shops} uniq={'coupon__filter'}  onGroupsChange={this.handleFilterGroupsChange} />
+
               {/*<div className='shops'>*/}
                 {/*{*/}
                   {/*shops.map((item, key) =>*/}

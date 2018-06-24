@@ -22,9 +22,31 @@
 .social__links li  {
   text-decoration: none;
   list-style-type: none;
+  margin: 10px;
+}
+
+.social__links-vk a {
+  display: block;
+  width: 46px;
+  height: 45px;
+  line-height: 4;
+
 }
 
 
+.social__links-telegram a {
+  display: block;
+  width: 46px;
+  height: 45px;
+}
+
+
+
+.social__links-insta a {
+  display: block;
+  width: 46px;
+  height: 45px;
+}
 
 
 

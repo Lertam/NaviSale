@@ -27,7 +27,6 @@ class SelectItem extends Component {
     }
   }
   handleCheckboxClick = ({ target: { checked, name, id } }) => {
-
     const { group } = this.state
     const { set, onListChange } = this.props
     let _newGroup = group
@@ -45,25 +44,26 @@ class SelectItem extends Component {
     }
     onListChange(_newGroup)
   }
+
   render () {
     const { selected, set, styles, opened, uniqLabel } = this.props
     const { group } = this.state
     const options = {
-      items: 6,
       nav: true,
       loop: true,
+      center: true,
+      items:6,
       slideBy:1,
       navClass: ['owl-prev__left', 'owl-next__right'],
-      margin: 30
+      margin: 10
     };
-  console.log(set)
     return (
       <div className='selectItem'>
-        <div onClick={this.handleDropDownClick} className={`selected ${styles.selectedClassName || ''}`}>
-          {
-            group.map((item, key) => <span key={key}>{ item.Name }</span>)
-          }
-        </div>
+        {/*<div onClick={this.handleDropDownClick} className={`selected ${styles.selectedClassName || ''}`}>*/}
+          {/*{*/}
+            {/*group.map((item, key) => <span key={key}>{ item.Name }</span>)*/}
+          {/*}*/}
+        {/*</div>*/}
         <div className={`dropdown opened`}>
           <OwlCarousel  options={options} >
           {
@@ -72,13 +72,13 @@ class SelectItem extends Component {
                 <input className="filter__check" type='checkbox' name={key} id={item.ID} onClick={this.handleCheckboxClick} />
                 <div >
                 <label className={
-                  `${` button__filter${item.ID}`} ${this.state.checked__filter ? `active__filter` : ''}`}
-                    htmlFor={item.ID}>
-                  <div className="filter__shop__wrapper">
-                    <div className="image__filter__content">
-                    <div className="image__wrapper"> <img src={item.LogoUrl} alt=""/> </div>
+                  `${`button__filter${item.ID}`} ${this.state.checked__filter ? `active__filter` : ''}`}
+                    htmlFor={item.ID} >
+                  <div className="filter__shop__wrapper" >
+                    <div className="image__filter__content" >
+                    <div className="image__wrapper"> <img  src={item.LogoUrl} alt=""/> </div>
                     </div>
-                    <div className="filter__shop__content">
+                    <div className="filter__shop__content" >
                   <p>{item.Name}</p>
                       <p>{item.Amount} предложений</p>
                     </div>
