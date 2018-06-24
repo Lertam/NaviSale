@@ -62,6 +62,7 @@ class Shops extends Component {
       items: 7,
       slideBy:1,
       navClass: ['owl-prev__left', 'owl-next__right'],
+      navText: ['<div class="navTextRight"> </div>', '']
     };
     return (
       <Fragment>

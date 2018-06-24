@@ -49,8 +49,9 @@
   align-items: center;
   background: white;
   cursor: pointer;
-  box-shadow: 0 0 10px rgb(243, 235, 235);
 }
+
+
 
 .image__wrapper {
   width: 70px;
@@ -107,12 +108,16 @@ display: flex;
   position: absolute !important;
   top: -110px;
   left: -49px;
+  height: 30px;
+  background: url('images/Right.png');
 }
 
-.owl-next__right {
+.navTextRight {
   position: absolute !important;
   top: -110px;
   right: -49px;
+  height: 30px;
+  background: url('images/Right.png');
 }
 
 .owl-item .active .center {

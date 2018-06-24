@@ -11,7 +11,37 @@
 
 
 .filter__shop__wrapper {
-  box-shadow: 0 0 10px #c9bcb;
+  width: 165px;
+  background-color: #ffffff;
+
+  &:hover {
+    border-radius: 3px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.25);
+    background-color: #ffffff;
+    transform: translate(-25px, 6px);
+    transition: 0.3s;
+    font-size: 14px;
+    color: rgb(0,0,0);
+    font-family: "Open Sans";
+    font-weight: bold;
+    text-align: center;
+
+    .filter__shop__content {
+      border-radius: 3px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.25);
+      background-color: #e5e5e5;
+      width: 100%;
+    }
+  }
+}
+.owl-stage {
+  padding-bottom: 9px !important;
+}
+
+
+
+.shops {
+  padding-bottom: 7px;
 }
 
 .tab-content {
@@ -19,8 +49,8 @@
 }
 
 .filter__shop__content {
-  position: relative;
-  top: -35px;
+  height: 64px;
+  line-height: 1.6;
 }
 
 .coupons {
