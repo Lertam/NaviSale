@@ -24,7 +24,7 @@ class Coupons extends Component {
     const { sitesFilter } = this.state;
     const styles = {
       tabs: {
-        width: '400px',
+        width: '1170px',
         display: 'inline-block',
         marginRight: '30px',
         verticalAlign: 'top'
@@ -54,7 +54,7 @@ class Coupons extends Component {
         display: 'inline-block'
       },
       content: {
-        padding: '0 15px'
+        width: '100%'
       }
     };
     return (

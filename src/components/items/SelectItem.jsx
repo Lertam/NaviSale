@@ -59,26 +59,26 @@ class SelectItem extends Component {
     };
     return (
       <div className='selectItem'>
-        {/*<div onClick={this.handleDropDownClick} className={`selected ${styles.selectedClassName || ''}`}>*/}
-          {/*{*/}
-            {/*group.map((item, key) => <span key={key}>{ item.Name }</span>)*/}
-          {/*}*/}
-        {/*</div>*/}
+        <div onClick={this.handleDropDownClick} className={`selected ${styles.selectedClassName || ''}`}>
+          {
+            group.map((item, key) => <span key={key}>{ item.Name }</span>)
+          }
+        </div>
         <div className={`dropdown opened`}>
           <OwlCarousel  options={options} >
           {
             set.map((item, key) => (
               <div key={key} className={`item__${uniqLabel}-item item${item.ID}`}>
-                <input className="filter__check" type='checkbox' name={key} id={item.ID} onClick={this.handleCheckboxClick} />
+                <input className="filter__check" type='radio' name={key} id={item.ID} onClick={this.handleCheckboxClick} />
                 <div >
                 <label className={
-                  `${`button__filter${item.ID}`} ${this.state.checked__filter ? `active__filter` : ''}`}
-                    htmlFor={item.ID} >
+                  `${` button__filter${item.ID}`} ${this.state.checked__filter ? `active__filter` : ''}`}
+                    htmlFor={item.ID}>
                   <div className="filter__shop__wrapper" >
-                    <div className="image__filter__content" >
-                    <div className="image__wrapper"> <img  src={item.LogoUrl} alt=""/> </div>
+                    <div className="image__filter__content">
+                    <div className="image__wrapper"> <img onClick={this.handleCheckboxClick} src={item.LogoUrl} alt=""/> </div>
                     </div>
-                    <div className="filter__shop__content" >
+                    <div className="filter__shop__content" onClick={this.handleCheckboxClick} >
                   <p>{item.Name}</p>
                       <p>{item.Amount} предложений</p>
                     </div>

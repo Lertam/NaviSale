@@ -39,24 +39,23 @@ class Shops extends Component {
                        uniq={'shop__filter'} onGroupsChange={this.handleFilterGroupsChange} />
               </div>
               </div>
-
-              {/*<div className='shops'>*/}
-                {/*{*/}
-                  {/*shops.map((item, key) =>*/}
-                      {/*categoriesFilter.length !== 0*/}
-                          {/*? item.Categories && item.Categories.some(cat => flatFilter.includes(cat))  &&*/}
-                          {/*<SiteItem*/}
-                              {/*key={key}*/}
-                              {/*site={item}*/}
-                              {/*url={url}*/}
-                          {/*/>*/}
-                          {/*: <SiteItem*/}
-                              {/*key={key}*/}
-                              {/*site={item}*/}
-                              {/*url={url}*/}
-                          {/*/>*/}
-                  {/*)}*/}
-              {/*</div>*/}
+              <div className='shops'>
+                {
+                  shops.map((item, key) =>
+                      categoriesFilter.length !== 0
+                          ? item.Categories && item.Categories.some(cat => flatFilter.includes(cat))  &&
+                          <SiteItem
+                              key={key}
+                              site={item}
+                              url={url}
+                          />
+                          : <SiteItem
+                              key={key}
+                              site={item}
+                              url={url}
+                          />
+                  )}
+              </div>
             </Fragment>
           )
         }

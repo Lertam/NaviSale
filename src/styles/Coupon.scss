@@ -22,227 +22,373 @@
     box-shadow: 0px 0px 0px $color_text_bg_trans;
   }
 }
-@media only screen and (max-device-width : 480px) {
-  .couponContainer {
-    z-index: 9999;
-    position: fixed;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.2);
-    transition: 0.2s;
+//@media only screen and (max-device-width : 480px) {
+//  .couponContainer {
+//    z-index: 9999;
+//    position: fixed;
+//    display: flex;
+//    align-items: center;
+//    justify-content: center;
+//    top: 0;
+//    left: 0;
+//    width: 100%;
+//    height: 100%;
+//    background-color: rgba(0,0,0,0.2);
+//    transition: 0.2s;
+//
+//    .coupon {
+//      width: 85vw;
+//      height: 80vh;
+//      margin-top: -8vh;
+//      background: url('./images/dot.png');
+//      background-size: 15px 15px;
+//      box-sizing: border-box;
+//      box-shadow: 2px 0px 13px rgba(0, 0, 0, 0.05);
+//      animation-name: entering;
+//      animation-duration: 0.3s;
+//      position: relative;
+//
+//      p.header {
+//        padding: 30px;
+//        background: white;
+//        border-bottom: 1px solid black;
+//        font-family: $font_header;
+//        font-size: 25px;
+//      }
+//      div.descriptionWrapper {
+//        padding: 30px;
+//        border-left: 15px solid black;
+//        span {
+//          background: $color_text_bg;
+//          font-size: 19px;
+//          font-family: $font_body;
+//        }
+//      }
+//      div.codeWrapper {
+//        display: flex;
+//        flex-direction: column;
+//        align-items: center;
+//        justify-content: center;
+//        position: absolute;
+//        bottom: 0;
+//        box-sizing: border-box;
+//        padding: 50px;
+//        width: 100%;
+//        p.description {
+//          font-family: $font_body;
+//          padding: 20px;
+//          background: white;
+//          font-size: 19px;
+//        }
+//        p.code {
+//          cursor: pointer;
+//          border: none;
+//          background: $color_coupon_bg;
+//          font-size: 22px;
+//          padding: 20px;
+//          width: 100%;
+//          box-sizing: border-box;
+//          text-align: center;
+//          font-family: $font_header;
+//
+//          &.copied {
+//            animation-name: copied;
+//            animation-duration: 1s;
+//            color: white;
+//          }
+//        }
+//
+//        div {
+//          width: 100%;
+//          background: black;
+//          display: flex;
+//          align-items: center;
+//          justify-content: center;
+//          a {
+//            width: 100%;
+//            height: 100%;
+//            padding: 20px;
+//            color: white;
+//            text-align: center;
+//            font-family: $font_header;
+//            text-transform: uppercase;
+//            text-decoration: none;
+//            font-size: 17px;
+//            text-align: center;
+//          }
+//        }
+//
+//        // button {
+//        //   width: 50px;
+//        //   height: 50px;
+//        //   background: url('./images/copy.png');
+//        //   background-size: contain;
+//        //   margin-left: 20px;
+//        //   border: 0;
+//        //   cursor: pointer;
+//        //   &:focus { outline: 0; }
+//        // }
+//        input {
+//          opacity: 0;
+//          cursor: default;
+//          position: absolute;
+//          z-index: -1;
+//          left: -9999px;
+//        }
+//      }
+//    }
+//  }
+//}
+//@media only screen and (min-device-width : 480px) {
+//  .couponContainer {
+//    z-index: 9999;
+//    position: fixed;
+//    display: flex;
+//    align-items: center;
+//    justify-content: center;
+//    top: 0;
+//    left: 0;
+//    width: 100%;
+//    height: 100%;
+//    background-color: rgba(0,0,0,0.2);
+//    transition: 0.2s;
+//
+//    .coupon {
+//      width: 57vw;
+//      height: 75vh;
+//      background: url('./images/dot.png');
+//      background-size: 15px 15px;
+//      box-sizing: border-box;
+//      box-shadow: 2px 0px 13px rgba(0, 0, 0, 0.05);
+//      animation-name: entering;
+//      animation-duration: 0.3s;
+//      position: relative;
+//
+//      p.header {
+//        padding: 30px;
+//        background: white;
+//        border-bottom: 1px solid black;
+//        font-family: $font_header;
+//        font-size: 25px;
+//      }
+//      div.descriptionWrapper {
+//        padding: 30px;
+//        border-left: 15px solid black;
+//        span {
+//          background: $color_text_bg;
+//          font-size: 26px;
+//          font-family: $font_body;
+//        }
+//      }
+//      div.codeWrapper {
+//        position: absolute;
+//        bottom: 0;
+//        box-sizing: border-box;
+//        padding: 50px 100px;
+//        width: 100%;
+//        p.description {
+//          font-family: $font_body;
+//          padding: 20px;
+//          background: white;
+//          font-size: 19px;
+//        }
+//        p.code {
+//          cursor: pointer;
+//          border: none;
+//          background: $color_coupon_bg;
+//          font-size: 22px;
+//          padding: 20px;
+//          font-family: $font_header;
+//
+//          &.copied {
+//            animation-name: copied;
+//            animation-duration: 1s;
+//            color: white;
+//          }
+//        }
+//        // button {
+//        //   width: 50px;
+//        //   height: 50px;
+//        //   background: url('./images/copy.png');
+//        //   background-size: contain;
+//        //   margin-left: 20px;
+//        //   border: 0;
+//        //   cursor: pointer;
+//        //   &:focus { outline: 0; }
+//        // }
+//        div {
+//          background: black;
+//          display: flex;
+//          align-items: center;
+//          justify-content: center;
+//          margin-top: 22px;
+//          a {
+//            width: 100%;
+//            height: 100%;
+//            padding: 30px;
+//            color: white;
+//            text-align: center;
+//            font-family: $font_header;
+//            text-transform: uppercase;
+//            text-decoration: none;
+//            font-size: 17px;
+//            text-align: center;
+//          }
+//        }
+//        input {
+//          opacity: 0;
+//          cursor: default;
+//          position: absolute;
+//          z-index: -1;
+//          left: -9999px;
+//        }
+//      }
+//    }
+//  }
+//}
 
-    .coupon {
-      width: 85vw;
-      height: 80vh;
-      margin-top: -8vh;
-      background: url('./images/dot.png');
-      background-size: 15px 15px;
-      box-sizing: border-box;
-      box-shadow: 2px 0px 13px rgba(0, 0, 0, 0.05);
-      animation-name: entering;
-      animation-duration: 0.3s;
-      position: relative;
+.couponContainer {
+  z-index: 9999;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.2);
+  transition: 0.2s;
 
-      p.header {
-        padding: 30px;
-        background: white;
-        border-bottom: 1px solid black;
-        font-family: $font_header;
-        font-size: 25px;
-      }
-      div.descriptionWrapper {
-        padding: 30px;
-        border-left: 15px solid black;
-        span {
-          background: $color_text_bg;
-          font-size: 19px;
-          font-family: $font_body;
-        }
-      }
-      div.codeWrapper {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        position: absolute;
-        bottom: 0;
-        box-sizing: border-box;
-        padding: 50px;
-        width: 100%;
-        p.description {
-          font-family: $font_body;
-          padding: 20px;
-          background: white;
-          font-size: 19px;
-        }
-        p.code {
-          cursor: pointer;
-          border: none;
-          background: $color_coupon_bg;
-          font-size: 22px;
-          padding: 20px;
-          width: 100%;
-          box-sizing: border-box;
-          text-align: center;
-          font-family: $font_header;
+  .coupon {
+    width: 587px;
+    height: 540px;
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.25);
+    background-color: #ffffff;
+    box-sizing: border-box;
+    animation-name: entering;
+    animation-duration: 0.3s;
+    position: relative;
 
-          &.copied {
-            animation-name: copied;
-            animation-duration: 1s;
-            color: white;
-          }
-        }
-
-        div {
-          width: 100%;
-          background: black;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          a {
-            width: 100%;
-            height: 100%;
-            padding: 20px;
-            color: white;
-            text-align: center;
-            font-family: $font_header;
-            text-transform: uppercase;
-            text-decoration: none;
-            font-size: 17px;
-            text-align: center;
-          }
-        }
-
-        // button {
-        //   width: 50px;
-        //   height: 50px;
-        //   background: url('./images/copy.png');
-        //   background-size: contain;
-        //   margin-left: 20px;
-        //   border: 0;
-        //   cursor: pointer;
-        //   &:focus { outline: 0; }
-        // }
-        input {
-          opacity: 0;
-          cursor: default;
-          position: absolute;
-          z-index: -1;
-          left: -9999px;
-        }
+    p.header {
+      padding: 30px;
+      background: white;
+      border-bottom: 1px solid black;
+      font-family: $font_header;
+      font-size: 25px;
+    }
+    div.descriptionWrapper {
+      padding: 30px;
+      border-left: 15px solid black;
+      span {
+        background: $color_text_bg;
+        font-size: 26px;
+        font-family: $font_body;
       }
     }
-  }
+    div.codeWrapper {
+      position: absolute;
+      bottom: 0;
+      box-sizing: border-box;
+      padding: 50px 100px;
+      width: 100%;
+      p.description {
+        font-family: $font_body;
+        padding: 20px;
+        background: white;
+        font-size: 19px;
+      }
+      p.code {
+        cursor: pointer;
+        border: none;
+        background: $color_coupon_bg;
+        font-size: 22px;
+        padding: 20px;
+        font-family: $font_header;
+
+        &.copied {
+          animation-name: copied;
+          animation-duration: 1s;
+          color: white;
+        }
+      }
+    }}}
+
+
+.cupon__wrapper {
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-@media only screen and (min-device-width : 480px) {
-  .couponContainer {
-    z-index: 9999;
-    position: fixed;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.2);
-    transition: 0.2s;
 
-    .coupon {
-      width: 57vw;
-      height: 75vh;
-      background: url('./images/dot.png');
-      background-size: 15px 15px;
-      box-sizing: border-box;
-      box-shadow: 2px 0px 13px rgba(0, 0, 0, 0.05);
-      animation-name: entering;
-      animation-duration: 0.3s;
-      position: relative;
+.content__promocode {
+  text-align: center;
+}
 
-      p.header {
-        padding: 30px;
-        background: white;
-        border-bottom: 1px solid black;
-        font-family: $font_header;
-        font-size: 25px;
-      }
-      div.descriptionWrapper {
-        padding: 30px;
-        border-left: 15px solid black;
-        span {
-          background: $color_text_bg;
-          font-size: 26px;
-          font-family: $font_body;
-        }
-      }
-      div.codeWrapper {
-        position: absolute;
-        bottom: 0;
-        box-sizing: border-box;
-        padding: 50px 100px;
-        width: 100%;
-        p.description {
-          font-family: $font_body;
-          padding: 20px;
-          background: white;
-          font-size: 19px;
-        }
-        p.code {
-          cursor: pointer;
-          border: none;
-          background: $color_coupon_bg;
-          font-size: 22px;
-          padding: 20px;
-          font-family: $font_header;
+.code__wrapper {
+  width: 587px;
+  height: 201px;
+  background-color: #e7e7e7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 
-          &.copied {
-            animation-name: copied;
-            animation-duration: 1s;
-            color: white;
-          }
-        }
-        // button {
-        //   width: 50px;
-        //   height: 50px;
-        //   background: url('./images/copy.png');
-        //   background-size: contain;
-        //   margin-left: 20px;
-        //   border: 0;
-        //   cursor: pointer;
-        //   &:focus { outline: 0; }
-        // }
-        div {
-          background: black;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          margin-top: 22px;
-          a {
-            width: 100%;
-            height: 100%;
-            padding: 30px;
-            color: white;
-            text-align: center;
-            font-family: $font_header;
-            text-transform: uppercase;
-            text-decoration: none;
-            font-size: 17px;
-            text-align: center;
-          }
-        }
-        input {
-          opacity: 0;
-          cursor: default;
-          position: absolute;
-          z-index: -1;
-          left: -9999px;
-        }
-      }
-    }
-  }
+#promocode {
+  width: 162px;
+  display: flex;
+  height: 42px;
+  border-radius: 3px;
+  background-color: #ffffff;
+  outline: none;
+  font-weight: bold;
+  font-size: 18px;
+  border: navajowhite;
+  text-align: center;
+}
+
+.button__copy-code {
+  width: 155px;
+  height: 42px;
+  border-radius: 3px;
+  margin-left: 40px;
+  font-size: 14px;
+  color: red;
+  font-family: "Open Sans";
+  font-weight: bold;
+  border: 1px solid red;
+  outline: none;
+  cursor: pointer;
+  background-color: #ff212900;
+}
+
+.promocode__title p {
+  width: 440px;
+}
+
+.code__copy {
+  margin-top: 10px;
+}
+
+
+.button__to-website a {
+  font-family: 'Open Sans';
+  font-size: 16px;
+  color: white;
+  font-weight: bold;
+}
+
+.button__to-website {
+  margin-top: 10px;
+  width: 360px;
+  height: 42px;
+  border-radius: 3px;
+  background-color: #ff2129;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  color: #fff;
 }

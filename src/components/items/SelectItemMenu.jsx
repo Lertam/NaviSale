@@ -24,25 +24,25 @@ class SelectItemMenu extends Component {
       // document.onclick = () => this.setState({ opened: false })
     }
   }
-  handleCheckboxClick = ({ target: { checked, name, id } }) => {
-
-    const { group } = this.state
-    const { set, onListChange } = this.props
-    let _newGroup = group
-    this.setState({checked__filter:{ target: { checked, name }}})
-    if (checked) {
-      _newGroup.push(set[name])
-      this.setState({ group: _newGroup }, () => {
-        console.log(this.state.group)
-      })
-    } else {
-      _newGroup = _newGroup.filter(item => id != item.ID)
-      this.setState({ group: _newGroup }, () => {
-        console.log(this.state.group)
-      })
-    }
-    onListChange(_newGroup)
-  }
+  // handleCheckboxClick = ({ target: { checked, name, id } }) => {
+  //
+  //   const { group } = this.state
+  //   const { set, onListChange } = this.props
+  //   let _newGroup = group
+  //   this.setState({checked__filter:{ target: { checked, name }}})
+  //   if (checked) {
+  //     _newGroup.push(set[name])
+  //     this.setState({ group: _newGroup }, () => {
+  //       console.log(this.state.group)
+  //     })
+  //   } else {
+  //     _newGroup = _newGroup.filter(item => id != item.ID)
+  //     this.setState({ group: _newGroup }, () => {
+  //       console.log(this.state.group)
+  //     })
+  //   }
+  //   onListChange(_newGroup)
+  // }
   render () {
     const { selected, set, styles, opened, uniqLabel } = this.props
     const { group } = this.state
@@ -58,7 +58,7 @@ class SelectItemMenu extends Component {
             {
               set.map((item, key) => (
                   <div  className={`item__${uniqLabel}-item item${item.ID}`}>
-                    <input className="filter__check" type='checkbox' name={key} id={item.ID} onClick={this.handleCheckboxClick} />
+                    <input className="filter__check" type='checkbox' name={key} id={item.ID} onClick={this.props.handleClick} />
                     <div >
                       <label key={key} className={
                         `${`filter__item button__filter${item.ID}`} ${group.map((item, key) => item.ID) == item.ID ? `active__filter` : 'active__filter-none'}`}

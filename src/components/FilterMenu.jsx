@@ -19,7 +19,7 @@ class FilterMenu extends Component {
     const { group } = this.state
     const { set, onListChange } = this.props
     let _newGroup = group
-    this.setState({checked__filter:{ target: { checked, name }}})
+    this.setState({checked__filter: !this.state.checked__filter })
     if (checked) {
       _newGroup.push(set[name])
       this.setState({ group: _newGroup, checked__filter: !this.state.checked__filter }, () => {
@@ -43,7 +43,7 @@ class FilterMenu extends Component {
           <SelectItemMenu
               set={set}
               opened={opened}
-              checked__filter={this.state.checked__filter}
+              check__filter={this.state.checked__filter}
               imgUrl={this.props.image}
               uniqLabel={this.props.uniq}
               handleClick={this.handleCheckboxClick}
