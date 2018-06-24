@@ -2,58 +2,66 @@ import React, { Component, Fragment } from 'react'
 import { Link } from 'react-router-dom'
 import { Filters } from './'
 import '../../styles/SiteItem.scss'
-import OwlCarousel from 'react-owl-carousel2';
-import '../../styles/SelectItem.scss'
+
 
 class SiteItem extends Component {
   constructor (props) {
     super(props)
+
+    this.state = {
+      opened: false,
+      group: [],
+      checked__filter: false
+    }
   }
 
   componentDidMount () {
     this.setState({ opened: this.props.opened })
   }
-  handleDropDownClick = () => {
-    const { opened } = this.state
-    if (opened) {
-      this.setState({ opened: false })
-    } else {
-      this.setState({ opened: true })
-      // document.onclick = () => this.setState({ opened: false })
-    }
-  }
-  handleCheckboxClick = ({ target: { checked, name, id } }) => {
-    const { group } = this.state
-    const { set, onListChange } = this.props
-    let _newGroup = group
-    this.setState({checked__filter:{ target: { checked, name }}})
-    if (checked) {
-      _newGroup.push(set[name])
-      this.setState({ group: _newGroup }, () => {
-        console.log(this.state.group)
-      })
-    } else {
-      _newGroup = _newGroup.filter(item => id != item.ID)
-      this.setState({ group: _newGroup }, () => {
-        console.log(this.state.group)
-      })
-    }
-    onListChange(_newGroup)
-  }
-
 
 
   render () {
-    const { site, url } = this.props
-    console.log(this.props)
+
+    const { key, site, url } = this.props
+    const { group } = this.state
+    const options = {
+      nav: true,
+      loop: true,
+      slideBy:1,
+      navClass: ['owl-prev__left', 'owl-next__right'],
+      margin: 10
+    };
+
     return (
-      <Link to={`${url}/${site.ID}`} className='siteItem'>
-        <p className='name'>{ site.Name }</p>
-        <p className='domain'>{ site.Domain }</p>
-        <div className='descriptionContainer'>
-          <span dangerouslySetInnerHTML={{__html: site.DeliveryInfo}}></span>
+      <div className="selectItem">
+        {/*<div onClick={this.handleDropDownClick} className={`selected ${styles.selectedClassName || ''}`}>*/}
+          {/*{*/}
+            {/*group.map((item, key) => <span key={key}>{ item.Name }</span>)*/}
+          {/*}*/}
+        {/*</div>*/}
+        <div >
+                <div key={key} className={`item__${site.ID}-item item${site.ID}`}>
+                  <input className="filter__check" type="radio" name={key} id={site.ID} onClick={this.props.handleClick}  />
+                  <div >
+                    <label
+                      className={
+                        `${` button__filter${site.ID}`} ${this.state.checked__filter ? `active__filter` : ''}`}
+                      htmlFor={site.ID}
+                    >
+                      <div className="filter__shop__wrapper" >
+                        <div className="image__filter__content">
+                          <div className="image__wrapper"> <img src={site.LogoUrl} alt="" /> </div>
+                        </div>
+                        <div className="filter__shop__content"  >
+                          <p>{site.Name}</p>
+                          <p>{site.Amount} предложений</p>
+                        </div>
+                      </div>
+                    </label>
+                  </div>
+                </div>
         </div>
-      </Link>
+      </div>
     )
   }
 }

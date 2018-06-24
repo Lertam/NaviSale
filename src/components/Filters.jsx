@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { SelectItem } from './items'
+import {SiteItem} from './items'
 
 class Filters extends Component {
   constructor (props) {
@@ -18,15 +19,22 @@ class Filters extends Component {
     const { opened } = this.state
     return (
       <div className='filters'>
-        <SelectItem
-          set={set}
-          opened={opened}
-          uniqLabel={this.props.uniq}
-          styles={{
-            selectedClassName: 'categorySelect'
-          }}
-          onListChange={this.handleSelectChange}
-          />
+        {/*<SelectItem*/}
+          {/*set={set}*/}
+          {/*opened={opened}*/}
+          {/*uniqLabel={this.props.uniq}*/}
+          {/*styles={{*/}
+            {/*selectedClassName: 'categorySelect'*/}
+          {/*}}*/}
+          {/*onListChange={this.handleSelectChange}*/}
+          {/*/>*/}
+        {/*<SiteItem  set={set}*/}
+                   {/*opened={opened}*/}
+                   {/*uniqLabel={this.props.uniq}*/}
+                   {/*styles={{*/}
+                     {/*selectedClassName: 'categorySelect'*/}
+                   {/*}}*/}
+                   {/*onListChange={this.handleSelectChange} />*/}
       </div>
     )
   }
