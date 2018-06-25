@@ -109,20 +109,32 @@ display: flex;
   top: -110px;
   left: -49px;
   height: 30px;
+  width: 30px;
+  cursor: pointer;
+  display: block;
   background: url('images/Right.png');
+  &:hover {
+    background: url('images/Right__fill.png');
+  }
 }
 
-.navTextRight {
+.owl-next__right {
   position: absolute !important;
   top: -110px;
+  display: block;
   right: -49px;
   height: 30px;
+  width: 30px;
+  transform: rotate(-180deg);
+  cursor: pointer;
   background: url('images/Right.png');
+  &:hover {
+    background: url('images/Right__fill.png');
+  }
 }
 
-.owl-item .active .center {
-  display: none;
-}
+
+
 
 
 /**

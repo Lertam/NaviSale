@@ -34,20 +34,14 @@ class SiteItem extends Component {
 
     return (
       <div className="selectItem">
-        {/*<div onClick={this.handleDropDownClick} className={`selected ${styles.selectedClassName || ''}`}>*/}
-          {/*{*/}
-            {/*group.map((item, key) => <span key={key}>{ item.Name }</span>)*/}
-          {/*}*/}
-        {/*</div>*/}
-        <div >
+        <div>
                 <div key={key} className={`item__${site.ID}-item item${site.ID}`}>
                   <input className="filter__check" type="radio" name={key} id={site.ID} onClick={this.props.handleClick}  />
                   <div >
                     <label
                       className={
                         `${` button__filter${site.ID}`} ${this.state.checked__filter ? `active__filter` : ''}`}
-                      htmlFor={site.ID}
-                    >
+                      htmlFor={site.ID}>
                       <div className="filter__shop__wrapper" >
                         <div className="image__filter__content">
                           <div className="image__wrapper"> <img src={site.LogoUrl} alt="" /> </div>

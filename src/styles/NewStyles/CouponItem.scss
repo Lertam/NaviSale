@@ -10,6 +10,14 @@
 }
 
 
+.owl-item:first-child {
+  display: none !important;
+}
+
+.owl-item:last-child {
+  display: none !important;
+}
+
 .filter__shop__wrapper {
   width: 165px;
   background-color: #ffffff;

@@ -9,6 +9,7 @@ import { FilterMenu } from './'
 import { ShopContainer } from '../containers'
 import '../styles/NewStyles/Header__Filter.scss'
 import OwlCarousel from 'react-owl-carousel2';
+import right from '../styles/images/Right.png'
 
 class Shops extends Component {
   constructor (props) {
@@ -57,9 +58,9 @@ class Shops extends Component {
     console.log(categories)
     const options = {
       nav: true,
-      loop: true,
-      center: true,
       items: 7,
+      loop: true,
+      dots:false,
       slideBy:1,
       navClass: ['owl-prev__left', 'owl-next__right'],
       navText: ['<div class="navTextRight"> </div>', '']
