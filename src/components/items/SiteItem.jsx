@@ -10,8 +10,6 @@ class SiteItem extends Component {
 
     this.state = {
       opened: false,
-      group: [],
-      checked__filter: false
     }
   }
 
@@ -22,7 +20,8 @@ class SiteItem extends Component {
 
   render () {
 
-    const { key, site, url } = this.props
+    const {  site, url } = this.props
+    console.log(site)
     const { group } = this.state
     const options = {
       nav: true,
@@ -35,8 +34,9 @@ class SiteItem extends Component {
     return (
       <div className="selectItem">
         <div>
-                <div key={key} className={`item__${site.ID}-item item${site.ID}`}>
-                  <input className="filter__check" type="radio" name={key} id={site.ID} onClick={this.props.handleClick}  />
+                <div  className={`item__${site.ID}-item item${site.ID}`}>
+                  <input className="filter__check" type="checkbox"
+                         key={this.props.prop} name={this.props.prop} id={site.ID} onClick={(evt) =>this.props.handleClick(evt)}  />
                   <div >
                     <label
                       className={

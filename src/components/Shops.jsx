@@ -15,36 +15,33 @@ class Shops extends Component {
   constructor (props) {
     super(props)
     this.state = {
-      categoriesFilter: []
+      categoriesFilter: [],
+      group: []
     }
   }
   handleFilterGroupsChange = selected => {
     this.setState({ categoriesFilter: selected })
   }
 
-  handleSelectChange = selected => {
-    const { onGroupsChange } = this.props
-    onGroupsChange(selected)
-  }
 
-  handleCheckboxClick = ({ target: { checked, name, id } }) => {
-
+  handleCheckboxClick = (evt) => {
+    console.log(evt.target.name)
     const { group } = this.state
-    const { set, onListChange } = this.props
+    const { shops, onListChange } = this.props
     let _newGroup = group
     this.setState({checked__filter: !this.state.checked__filter })
-    if (checked) {
-      _newGroup.push(set[name])
+    if (evt.target.checked) {
+      _newGroup.push(shops[evt.target.name])
       this.setState({ group: _newGroup, checked__filter: !this.state.checked__filter }, () => {
         console.log(this.state.group)
       })
     } else {
-      _newGroup = _newGroup.filter(item => id != item.ID)
+      _newGroup = _newGroup.filter(item => evt.target.id != item.ID)
       this.setState({ group: _newGroup, checked__filter: !this.state.checked__filter  }, () => {
         console.log(this.state.group)
       })
     }
-    this.handleSelectChange(_newGroup)
+
   }
 
 
@@ -87,19 +84,22 @@ class Shops extends Component {
                       categoriesFilter.length !== 0
                           ? item.Categories && item.Categories.some(cat => flatFilter.includes(cat))  &&
                           <SiteItem
-                              key={key}
+                              prop={key}
                               site={item}
                               url={url}
+                              onListChange={this.handleSelectChange}
                               handleClick={this.handleCheckboxClick}
                           />
                           :
                             <SiteItem
-                              key={key}
+                              prop={key}
                               site={item}
+                              onListChange={ this.handleFilterGroupsChange }
                               handleClick={this.handleCheckboxClick}
                               url={url}  />
                   )}
                 </OwlCarousel>
+
               </div>
             </Fragment>
           )

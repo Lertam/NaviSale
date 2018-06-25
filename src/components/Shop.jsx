@@ -17,15 +17,14 @@ class Shop extends Component {
     window.scrollTo(0, 0)
   }
 
+
+
   render () {
     const { shop, url } = this.props
 
     return (
       <div className='shopContainer'>
-        <div className='shopInfo'>
-          <a href={`http://${shop.Domain}`}className='name'>{ shop.Name }</a>
-          <p className='delivery' dangerouslySetInnerHTML={{ __html: shop.DeliveryInfo }}></p>
-        </div>
+
         <div className='coupons shop'>
           {
             shop.Promocodes && shop.Promocodes.length > 0 && shop.Promocodes.map((item, key) => <CouponItem key={key} to={`${url}/coupons/${item.ID}`} coupon={item}/>)
@@ -36,7 +35,7 @@ class Shop extends Component {
             )
           }
         </div>
-        <Route path={`${url}/coupons/:couponId`} component={CouponContainer} />
+
       </div>
     )
   }
