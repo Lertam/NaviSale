@@ -1,5 +1,4 @@
-import * as couponsActions from './coupons'
-import * as shopsActions from './shops'
-import * as metaActions from './meta'
+import * as couponsActions from './coupons';
+import * as shopsActions from './shops';
 
-export { couponsActions, shopsActions, metaActions }
+export { couponsActions, shopsActions };

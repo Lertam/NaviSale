@@ -1,6 +1,5 @@
-import coupons from './coupons'
-import shops from './shops'
-import meta from './meta'
-import categories from './categories'
+import coupons from './coupons';
+import shops from './shops';
+import categories from './categories';
 
-export { shops, coupons, meta, categories }
+export { shops, coupons, categories };
