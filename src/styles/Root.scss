@@ -3,120 +3,120 @@
 // @import "~slick-carousel/slick/slick.css";
 // @import "~slick-carousel/slick/slick-theme.css";
 * {
-    box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
+	box-sizing: border-box;
+	font-family: 'Open Sans', sans-serif;
 }
 a:hover{
-    text-decoration: none;
-    color: #0077c2
+	text-decoration: none;
+	color: #0077c2
 }
 
 body {
-    margin: 0;
-    padding: 0;
+	margin: 0;
+	padding: 0;
 }
 .navbar-brand{
-    margin-left: 15px;
-    
+	margin-left: 15px;
+
 }
 .navbar-brand img{
-    border-radius: 50px;
+	border-radius: 50px;
 }
 #topnav {
-    width: 100%;
-    background-color: #0077c2;
-    padding: 15px 0;
+	width: 100%;
+	background-color: #0077c2;
+	padding: 15px 0;
 }
 
 #topnav i, #footer i {
-    font-size: 36px;
-    color: #fff;
+	font-size: 36px;
+	color: #fff;
 }
 
 #category {
-    width: 100%;
-    background-color: #2196f3;
-    padding: 70px 0 40px 0;
+	width: 100%;
+	background-color: #2196f3;
+	padding: 70px 0 40px 0;
 }
 
 #category h1 {
-    font-size: 36px;
-    color: #fff;
+	font-size: 36px;
+	color: #fff;
 }
 
 #category h3 {
-    margin-top: 35px;
-    font-size: 24px;
-    color: #fff;
+	margin-top: 35px;
+	font-size: 24px;
+	color: #fff;
 }
 #category .active-b{
-    color: #2196f3;
-    background-color: #fff;
+	color: #2196f3;
+	background-color: #fff;
 }
 .button {
-    font-size: 14px;
-    border-radius: .25rem;
-    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+	font-size: 14px;
+	border-radius: .25rem;
+	transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
 
 .button-category {
-    padding: 10px 0 10px 0;
-    min-width: 150px;
-    color: #fff;
-    border: 2px solid #fff;
-    border-radius: 5px;
-    background: transparent;
-    margin-top: 6px;
-    margin-right: 15px;
+	padding: 10px 0 10px 0;
+	min-width: 150px;
+	color: #fff;
+	border: 2px solid #fff;
+	border-radius: 5px;
+	background: transparent;
+	margin-top: 6px;
+	margin-right: 15px;
 }
 .button-category:hover{
-    color: #2196f3;
-    background-color: #fff;
+	color: #2196f3;
+	background-color: #fff;
 }
 
 .button-category:first-child {
-    margin-left: 0;
+	margin-left: 0;
 }
 
 .button-category:last-child {
-    margin-right: 0;
+	margin-right: 0;
 }
 
 .dropdown-menu {
-    font-size: 14px;
-    min-width: 250px;
-    margin: 5px 0 0 -100px;
-    padding: 5px 30px;
+	font-size: 14px;
+	min-width: 250px;
+	margin: 5px 0 0 -100px;
+	padding: 5px 30px;
 }
 .dropdown-menu a{
-    font-size: 14px;
+	font-size: 14px;
 }
 .dropdown-menu a:hover {
-    font-weight: bold;
-    background-color: #ff212a;
-    border: 2px solid transparent;
-    border-radius: 2px;
-    color: #fff !important;
+	font-weight: bold;
+	background-color: #ff212a;
+	border: 2px solid transparent;
+	border-radius: 2px;
+	color: #fff !important;
 }
 #shops{
-    margin-top: 30px;
-    margin-bottom: 50px;
+	margin-top: 30px;
+	margin-bottom: 50px;
 }
 #shops .container{
-    padding: 0;
-    font-size: 14px;
+	padding: 0;
+	font-size: 14px;
 }
 
 .shop{
-    font-size: 14px;
-    border-radius: 2px;
-    transition: box-shadow .1s;
-    max-width: 200px;
+	font-size: 14px;
+	border-radius: 2px;
+	transition: box-shadow .1s;
+	max-width: 200px;
 }
 .shop:hover{
-    background-color: #e6e6e6;
-    font-weight: bold;
-    box-shadow: 0 0 11px rgba(33,33,33,.2);
+	background-color: #e6e6e6;
+	font-weight: bold;
+	box-shadow: 0 0 11px rgba(33,33,33,.2);
 }
 .shop-image{
   position: relative;
@@ -135,261 +135,257 @@ body {
   border-radius: 24px;
 }
 .active-shop{
-    background-color: #2196f3;
-    color: #fff;
-    font-weight: bold;
-    box-shadow: 0 0 11px rgba(33,33,33,.2);
+	background-color: #2196f3;
+	color: #fff;
+	font-weight: bold;
+	box-shadow: 0 0 11px rgba(33,33,33,.2);
 }
 .active-shop:hover{
   background-color: #2196f3 !important;
   color: #fff !important;
 }
 .shop img {
-    border-top-right-radius: 2px;
-    border-top-left-radius: 2px;
-    min-height: 155px;
-    background-color: white;
+	border-top-right-radius: 2px;
+	border-top-left-radius: 2px;
+	min-height: 155px;
+	background-color: white;
 }
 #tick {
-    background-color: #e6e6e6;
+	background-color: #e6e6e6;
 }
 .active-shop #tick {
-    background-color: #2196f3;
+	background-color: #2196f3;
 }
 
-.slick-slide > div {padding-left:15px!important;padding-right:15px!important;}
+.slick-slide > div {
+	padding-left:15px!important;padding-right:15px!important;
+}
 
 .coupon img, .modal img {
-    height:150px;
+	height:150px;
 }
 
 .slick-prev::before,.slick-next::before
 {
-    color: #b6b6b6;
+	color: #b6b6b6;
 }
 .slick-next{
-    right: -10px;
+	right: -10px;
 }
 .slick-prev{
-    left: -10px;
+	left: -10px;
 }
 .slick-disabled{
-    color: #b6b6b6;
-    opacity: .25;
+	color: #b6b6b6;
+	opacity: .25;
 }
 
 
 .shop p{
 
-    margin: 0;
+	margin: 0;
 }
 
 #coupons {
-    background-color: #e6e6e6;
-    padding-top:40px;
-    padding-bottom: 70px; 
+	background-color: #e6e6e6;
+	padding-top:40px;
+	padding-bottom: 70px;
 }
 .coupon-menu{
-    background-color: #fff;
-    padding: 12px 18px;
-    border-radius: 5px;
-    border: none;
-    width: max-content;
-    display: inline-block;
-    margin-left: 15px;
-} 
+	background-color: #fff;
+	padding: 12px 18px;
+	border-radius: 5px;
+	border: none;
+	width: max-content;
+	display: inline-block;
+	margin-left: 15px;
+}
 .coupon-menu-active{
-    background: transparent;
-    border: 2px solid #ff212a;
-    color: #ff212a;
+	background: transparent;
+	border: 2px solid #ff212a;
+	color: #ff212a;
 }
 .coupon{
-    width: 100%;
-    background: #fff;
-    border-radius: 2px;
-    transition: box-shadow .1s;
-    padding: 20px 0; 
+	width: 100%;
+	background: #fff;
+	border-radius: 2px;
+	transition: box-shadow .1s;
+	padding: 20px 0;
 }
 .coupon>.row{
-    margin: 0;
+	margin: 0;
 }
 
 .coupon img{
-    border-radius: 2px;
+	border-radius: 2px;
 }
 .coupon:hover{
-    box-shadow: 0 0 11px rgba(33,33,33,.2);
+	box-shadow: 0 0 11px rgba(33,33,33,.2);
 }
 .coupon h4{
-    font-size: 16px;
-    font-weight: bold;
+	font-size: 16px;
+	font-weight: bold;
 }
 .coupon p{
-    font-size: 14px;
+	font-size: 14px;
 }
 .days-left{
-    background-color: #e6e6e6;
-    padding: 0 8px;
+	background-color: #e6e6e6;
+	padding: 0 8px;
 }
 .people{
-    color: #b6b6b6;
+	color: #b6b6b6;
 }
 .dot{
-    width: 10px;
-    height:  10px;
-    display: inline-block;
-    border-radius: 50%;
-    background-color: #e6e6e6;
-    margin: 0px 3px;
+	width: 10px;
+	height:  10px;
+	display: inline-block;
+	border-radius: 50%;
+	background-color: #e6e6e6;
+	margin: 0px 3px;
 }
 .dot:first {
-    margin-left: 30px;
+	margin-left: 30px;
 }
 .bigdot{
-    display: inline-block;
-    border-radius: 50%;
-    background-color: #e6e6e6;
-    position: absolute;
-    height: 30px;
-    width: 30px;
+	display: inline-block;
+	border-radius: 50%;
+	background-color: #e6e6e6;
+	position: absolute;
+	height: 30px;
+	width: 30px;
 }
 .discount{
-    display: block;
-    width: 100%;
-    padding: 1px 3px;
-    border: 1px dashed #0077c2;
-    font-size: 24px;
-    font-weight: bold;
-    color: #0077c2
+	display: block;
+	width: 100%;
+	padding: 1px 3px;
+	border: 1px dashed #0077c2;
+	font-size: 24px;
+	font-weight: bold;
+	color: #0077c2
 
 }
 .coupon-btn{
-    display: block;
-    width: 100%;
-    border: none;
-    background-color: #ff212a;
-    color: #fff;
-    font-weight: bold;
-    padding: 10px 10px;
-    border-radius: 2px;
+	display: block;
+	width: 100%;
+	border: none;
+	background-color: #ff212a;
+	color: #fff;
+	font-weight: bold;
+	padding: 10px 10px;
+	border-radius: 2px;
 }
 
 .modal-dialog{
-    max-width: 580px;
+	max-width: 580px;
 }
 .modal-body{
-    padding: 0;
+	padding: 0;
 }
 .modal-body h4{
-    font-size: 24px;
-    font-weight: bold;
+	font-size: 24px;
+	font-weight: bold;
 }
 .modal-body h6{
-    font-size: 18px;
-    font-weight: bold;
+	font-size: 18px;
+	font-weight: bold;
 }
 .code{
-    display: block;
-    width: 100%;
-    background-color: #fff;
-    padding: 10px 0;
+	display: block;
+	width: 100%;
+	background-color: #fff;
+	padding: 10px 0;
 }
 .modal-body p{
-    font-size: 14px;
+	font-size: 14px;
 }
 .close{
-    margin-right: 10px;
+	margin-right: 10px;
 }
 .coupon-modal{
-    font-size: 14px;
-    width: 100%;
-    background: #e8e8e8;
-    margin: 30px 0;
-    padding: 30px 0;
+	font-size: 14px;
+	width: 100%;
+	background: #e8e8e8;
+	margin: 30px 0;
+	padding: 30px 0;
 }
 .copy-coupon{
-    display: block;
-    width: 100%;
-    border: 2px solid #ff212a;
-    color: #ff212a;
-    font-weight: bold;
-    background: transparent;
-    padding: 8px 0px; 
+	display: block;
+	width: 100%;
+	border: 2px solid #ff212a;
+	color: #ff212a;
+	font-weight: bold;
+	background: transparent;
+	padding: 8px 0px;
 }
 #footer{
   background-color: #969696;
-  padding: 30px 0; 
+  padding: 30px 0;
 }
 #footer p{
-    margin: 0;
-    font-size: 14px;
+	margin: 0;
+	font-size: 14px;
 }
 #footer .col-12{
-    padding-right: 0;
+	padding-right: 0;
+}
+.modal-content button.close span {
+	font-size:1.8em;
 }
 
- @media (max-width: 575.98px) {
-    .coupon-menu{
-        margin-top: 10px;
-    }
-  }
+@media (max-width: 575.98px) {
+	.coupon-menu{
+		margin-top: 10px;
+	}
+}
 
 @media (min-width: 576px) and (max-width: 767.98px) {
-    .dropdown-menu {
-        min-width: 150px;
-        margin: 5px 0 0 0;
-    }
-    .coupon-menu{
-        margin-top: 10px;
-    }
-    
- } 
+	.dropdown-menu {
+		min-width: 150px;
+		margin: 5px 0 0 0;
+	}
+	.coupon-menu{
+		margin-top: 10px;
+	}
+}
 
 
-@media screen and (max-width: 768px) { 
-    .modal-content button.close span {
-        font-size:1.8em;
-    }
-    .coupon-menu {
-        margin-right:inherit;
-        display:block;
-        width:calc(83.333333% + 15px);
-    }
-    .button-category:last-child {
-        margin-right:15px;
-    }
-    #category {
-        padding: 35px 0 20px 0;
-    }
-    
-    #category h1 {
-        font-size: 28px;
-    }
-    
-    #category h3 {
-        margin-top: 25px;
-        font-size: 20px;
-    }
-    .dropdown-menu {
-        min-width: 150px;
-        margin: 5px 0 0 0;
-    }
-    .slick-next{
-        right: 10px;
-    }
-    .slick-prev{
-        left: 10px;
-    }
- }
+@media screen and (max-width: 768px) {
+	.coupon-menu {
+		margin-right:inherit;
+		display:block;
+		width:calc(83.333333% + 15px);
+	}
+	.button-category:last-child {
+		margin-right:15px;
+	}
+	#category {
+		padding: 35px 0 20px 0;
+	}
 
- @media (min-width: 992px) and (max-width: 1199.98px) {
-    .dropdown-menu {
-        min-width: 200px;
-        margin: 5px 0 0 -50px;
-    }
- } 
+	#category h1 {
+		font-size: 28px;
+	}
 
+	#category h3 {
+		margin-top: 25px;
+		font-size: 20px;
+	}
+	.dropdown-menu {
+		min-width: 150px;
+		margin: 5px 0 0 0;
+	}
+	.slick-next{
+		right: 10px;
+	}
+	.slick-prev{
+		left: 10px;
+	}
+}
 
-
-
-
+@media (min-width: 992px) and (max-width: 1199.98px) {
+	.dropdown-menu {
+		min-width: 200px;
+		margin: 5px 0 0 -50px;
+	}
+}
