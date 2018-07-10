@@ -1,56 +1,42 @@
-import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
-import '../styles/Header.scss'
-import logo from '../styles/images/logo__header.png'
-import VkIcon from '../styles/images/social/VK.svg'
-import TelIcon from '../styles/images/social/Telegram.svg'
-import InsIcon from '../styles/images/social/Inst.svg'
-class Header extends Component {
-  constructor (props) {
-    super(props)
-    this.state = {
-      collapsed: false
-    }
-  }
-  componentDidMount () {
-    document.onscroll = () => window.pageYOffset > 30
-                              ? this.setState({ collapsed: true })
-                              : this.setState({ collapsed: false })
-  }
+import React, { Component } from 'react';
+// import '../styles/Header.scss';
+import logo from '../styles/images/logo__header.png';
 
-  render () {
-    const { collapsed } = this.state
-    const { path } = this.props
+class Header extends Component {
+  render() {
     return (
-        <div className='head__wrapper'>
-             <header className="header__content">
-                  <div className="header__content-logo">
-                    <img src={logo} alt=""/>
-                  </div>
-                  <div className="social__content">
-                    <ul className="social__links">
-                      <li className="social__links-vk">
-                        <a href="http://vk.com"><img src={VkIcon} alt=""/></a>
-                      </li>
-                      <li className="social__links-telegram">
-                        <a href="#"><img src={TelIcon} alt=""/></a>
-                      </li>
-                      <li className="social__links-insta">
-                        <a href="#"><img src={InsIcon} alt=""/></a>
-                      </li>
+        <section id="topnav">
+            <div className="container h-100 align-items-center">
+                <div className="row">
+                    <ul className="navbar-nav mr-auto">
+                        <li className="nav-item">
+                            <a className="navbar-brand" href="#">
+                                <img src={logo} alt="logo" />
+                            </a>
+                        </li>
                     </ul>
-                  </div>
-             </header>
-          </div>
-    )
+                    <ul className="navbar-nav ml-auto d-flex flex-row">
+                        <li className="nav-item col">
+                            <a className="nav-link" href="https://vk.com/dealfinder">
+                                <i className="fab fa-vk"></i>
+                            </a>
+                        </li>
+                        <li className="nav-item col">
+                            <a className="nav-link" href="https://t.me/dealfinder">
+                                <i className="fab fa-telegram-plane"></i>
+                            </a>
+                        </li>
+                        <li className="nav-item col">
+                            <a className="nav-link" href="https://instagram.com/dealfinder">
+                                <i className="fab fa-instagram"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    );
   }
 }
 
-export default Header
-
-
-{/*<header className={`${collapsed && 'shrink'}`}>*/}
-{/*<div className='logo'/>*/}
-{/*<Link className={`${path.match('coupons') && 'active'}`} to='/coupons'>Промокоды</Link>*/}
-{/*<Link className={`${path.match('shops') && 'active'}`} to='/shops'>Сайты</Link>*/}
-{/*</header>*/}
+export default Header;

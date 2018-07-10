@@ -1,6 +1,14 @@
 import { couponsTypes } from '../constants/types'
 import { couponsApi } from '../api'
 
+export const applyFilter = shops => dispatch => {
+  dispatch((() => ({
+    type: couponsTypes.APPLY_FILTER,
+    payload: shops
+  }))());
+  getCoupons();
+}
+
 export const getCoupons = data => dispatch => {
   dispatch((() => ({
     type: couponsTypes.GET_COUPONS__REQUEST

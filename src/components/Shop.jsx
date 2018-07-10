@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom'
 import { Route } from 'react-router'
 
 import { Loader } from './'
-import '../styles/Shop.scss'
-import '../styles/Coupons.scss'
+// import '../styles/Shop.scss'
+// import '../styles/Coupons.scss'
 import { CouponItem } from './items'
 import { CouponContainer } from '../containers'
 

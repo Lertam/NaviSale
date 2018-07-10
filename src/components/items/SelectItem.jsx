@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react'
 import { Link } from 'react-router-dom'
 import { Filters } from './'
-import '../../styles/SelectItem.scss'
+// import '../../styles/SelectItem.scss'
 import OwlCarousel from 'react-owl-carousel2';
 import right from '../../styles/images/Right.png'
 

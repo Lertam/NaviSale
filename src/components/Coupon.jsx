@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react'
 import { Loader } from './'
-import '../styles/Coupon.scss'
+// import '../styles/Coupon.scss'
 
 class Coupon extends Component {
   constructor (props) {

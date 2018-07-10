@@ -1,75 +1,38 @@
-import React, { Component, Fragment } from 'react'
-import { Link } from 'react-router-dom'
-import '../../styles/SelectItem.scss'
+import React, { Component } from 'react';
 
 
 class SelectItemMenu extends Component {
   constructor (props) {
-    super(props)
-    this.state = {
-      opened: false,
-      group: [],
-      checked__filter: false
-    }
+    super(props);
   }
-  componentDidMount () {
-    this.setState({ opened: this.props.opened })
-  }
-  handleDropDownClick = () => {
-    const { opened } = this.state
-    if (opened) {
-      this.setState({ opened: false })
-    } else {
-      this.setState({ opened: true })
-      // document.onclick = () => this.setState({ opened: false })
-    }
-  }
-  // handleCheckboxClick = ({ target: { checked, name, id } }) => {
-  //
-  //   const { group } = this.state
-  //   const { set, onListChange } = this.props
-  //   let _newGroup = group
-  //   this.setState({checked__filter:{ target: { checked, name }}})
-  //   if (checked) {
-  //     _newGroup.push(set[name])
-  //     this.setState({ group: _newGroup }, () => {
-  //       console.log(this.state.group)
-  //     })
-  //   } else {
-  //     _newGroup = _newGroup.filter(item => id != item.ID)
-  //     this.setState({ group: _newGroup }, () => {
-  //       console.log(this.state.group)
-  //     })
-  //   }
-  //   onListChange(_newGroup)
-  // }
   render () {
-    const { selected, set, styles, opened, uniqLabel } = this.props
-    const { group } = this.state
-    console.log(set)
+    const { group, set, styles, opened, uniqLabel } = this.props;
     return (
-        <div className='selectItem'>
-          <div onClick={this.handleDropDownClick} className={`selected ${styles.selectedClassName || ''}`}>
-            {
-              group.map((item, key) => <span key={key}>{ item.Name }</span>)
-            }
-          </div>
-          <div className={`dropdown opened`}>
-            {
-              set.map((item, key) => (
-                  <div  className={`item__${uniqLabel}-item item${item.ID}`}>
-                    <input className="filter__check" type='checkbox' name={key} id={item.ID} onClick={this.props.handleClick} />
-                    <div >
-                      <label key={key} className={
-                        `${`filter__item button__filter${item.ID}`} ${group.map((item, key) => item.ID) == item.ID ? `active__filter` : 'active__filter-none'}`}
-                             htmlFor={item.ID}>
-                        {item.Name}
-                      </label>
-                    </div>
-                  </div>
-              ))
-            }
-          </div>
+      <div className="col-10 d-flex justify-content-around flex-wrap">
+          {
+            set.slice(0, set.length > 5 ? 4 : 5).map((item, key) => (
+              <button key={key} data-id = {item.ID} name={key} 
+                onClick={this.props.handleClick}
+                className={ `button button-category ${group.filter(group => group.ID == item.ID).length > 0 ? 'active-b' : ''} ` }>
+                  { item.Name }
+              </button>
+            ))
+          }
+          {
+            set.length > 5 &&
+              <div className="dropdown">
+                <button className={ `button button-category dropdown-toggle ${set.slice(4).map(item=>item.ID).filter(id => group.map(item => item.ID).includes(id)).length > 0 ? 'active-b' : ''}` } type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false">
+                    Еще+
+                </button>
+                <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    {
+                      set.slice(4).map((item, key) => <a data-id = {item.ID} name={key+4}
+                      onClick={this.props.handleClick} key={key+4} className={ `dropdown-item ${ group.filter(group => group.ID == item.ID).length > 0 ? 'active-b' : ''}`}>{ item.Name }</a>)
+                    }
+                </div>
+            </div>
+          }
         </div>
     )
   }

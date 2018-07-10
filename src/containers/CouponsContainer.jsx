@@ -19,6 +19,7 @@ class CouponsContainer extends Component {
     const { coupons, shops, meta, couponsActions, shopsActions, match } = this.props
     return <Coupons
       coupons={coupons.set}
+      sitesFilter={coupons.filter}
       shops={shops.set}
       meta={meta}
       couponsActions={couponsActions}
@@ -31,7 +32,7 @@ class CouponsContainer extends Component {
 const mapStateToProps = state => ({
   coupons: state.coupons,
   shops: state.shops,
-  meta: state.meta,
+  meta: state.meta
 })
 const mapDispatchToProps = dispatch => ({
   couponsActions: bindActionCreators(couponsActions, dispatch),

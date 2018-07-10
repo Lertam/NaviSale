@@ -3,7 +3,7 @@ import { withRouter } from 'react-router'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 
-import { shopsActions } from '../actions'
+import { shopsActions, couponsActions } from '../actions'
 import { Shops } from '../components'
 
 class ShopsContainer extends Component {
@@ -16,13 +16,14 @@ class ShopsContainer extends Component {
     getCategories()
   }
   render () {
-    const { shops, categories, meta, shopsActions, match } = this.props
+    const { shops, categories, meta, shopsActions, match, couponsActions : { applyFilter } } = this.props
     return <Shops
       shops={shops.set}
       categories={categories.set}
       meta={meta}
       shopsActions={shopsActions}
       match={match}
+      onSitesChange={applyFilter}
       />
   }
 }
@@ -32,7 +33,8 @@ const mapStateToProps = state => ({
   categories: state.categories
 })
 const mapDispatchToProps = dispatch => ({
-  shopsActions: bindActionCreators(shopsActions, dispatch)
+  shopsActions: bindActionCreators(shopsActions, dispatch),
+  couponsActions: bindActionCreators(couponsActions, dispatch)
 })
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(ShopsContainer))

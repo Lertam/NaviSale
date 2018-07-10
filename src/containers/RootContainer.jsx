@@ -14,7 +14,7 @@ import {
 
 class RootContainer extends Component {
   constructor (props) {
-    super(props)
+    super(props);
   }
   render () {
     const {
@@ -23,17 +23,22 @@ class RootContainer extends Component {
     return (
       <Fragment>
         <Header path={pathname} />
-        <div>
+        <ShopsContainer />
+        <CouponsContainer />
+
+
+
+        {/* <div>
           <div className="category__filter">
             <ShopsContainer/>
-          </div>
-          <div className="contentWrapper">
-            <CouponsContainer/>
+          </div> */}
+          {/* <div className="contentWrapper">
+            <CouponsContainer/> */}
             {/*<Route path="/coupons" component={CouponsContainer} />*/}
             {/*<Route path="/shops" component={ShopsContainer} />*/}
-          </div>
+          {/* </div> */}
         <Footer />
-        </div>
+        {/*</div> */}
       </Fragment>
     )
   }
