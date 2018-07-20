@@ -11,6 +11,7 @@ class Coupons extends Component {
 	}
 	render () {
 		const { coupons, sitesFilter, shops, couponsActions: { getCoupon }, match: { url } } = this.props;
+		let actualCoupons = coupons.filter(coupon => parseInt((new Date(coupon.Expires) - new Date())/1000/60/60/24) > 0);
 		return (
 			<Fragment>
 				<section id="coupons">
@@ -31,7 +32,7 @@ class Coupons extends Component {
 							<TabContent for="popularTab">
 								<div className="row d-flex flex-wrap justify-content-center">
 									{
-										coupons.sort((a,b) => a.Description > b.Description).map((item, key) =>
+										actualCoupons.sort((a,b) => a.Description > b.Description).map((item, key) =>
 											sitesFilter.length !== 0
 													? !sitesFilter.every(site => site.Name !== item.Site) &&
 													<CouponItem
@@ -55,7 +56,7 @@ class Coupons extends Component {
 								<TabContent for="newTab">
 									<div className="row d-flex flex-wrap justify-content-center">
 										{
-											coupons.sort((a,b) => a.Code > b.Code).map((item, key) =>
+											actualCoupons.sort((a,b) => a.Code > b.Code).map((item, key) =>
 												sitesFilter.length !== 0
 													? !sitesFilter.every(site => site.Name !== item.Site) &&
 													<CouponItem
@@ -79,7 +80,7 @@ class Coupons extends Component {
 								<TabContent for="endingTab">
 									<div className="row d-flex flex-wrap justify-content-center">
 										{
-											coupons.sort((a,b)=>(new Date(a.Expires)) > (new Date(b.Expires))).map((item, key) =>
+											actualCoupons.sort((a,b)=>(new Date(a.Expires)) > (new Date(b.Expires))).map((item, key) =>
 												sitesFilter.length !== 0
 													? !sitesFilter.every(site => site.Name !== item.Site) &&
 													<CouponItem
