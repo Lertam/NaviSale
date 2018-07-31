@@ -14,19 +14,10 @@ class FilterMenu extends Component {
 		const { onGroupsChange } = this.props;
 		onGroupsChange(selected);
 	}
-	handleCheckboxClick = ({ target: { name, dataset } }) => {
-		const { group } = this.state;
+	handleCheckboxClick = ({ target: { name } }) => {
 		const { set } = this.props;
-		let _newGroup = group;
-		let checked = _newGroup.filter(item => item.ID == parseInt(dataset.id)).length == 0;
-		this.setState({checked__filter: !this.state.checked__filter });
-		if (checked) {
-			_newGroup.push(set[name]);
-			this.setState({ group: _newGroup, checked__filter: !this.state.checked__filter });
-		} else {
-			_newGroup = _newGroup.filter(item => parseInt(dataset.id) != item.ID);
-			this.setState({ group: _newGroup, checked__filter: !this.state.checked__filter  });
-		}
+		let _newGroup = [set[name]];
+		this.setState({ group: _newGroup, checked__filter: !this.state.checked__filter  });
 		this.handleSelectChange(_newGroup);
 	}
 	render () {
